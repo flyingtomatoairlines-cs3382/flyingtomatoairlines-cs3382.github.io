@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+
+<html>
+  
+        
+<head>
+    
+    <META charset="utf-8">     
+    <META name="GENERATOR" content="MSHTML 11.00.9600.17496"> 	 
+    <META name="author" content="Lee Ho Ying 53552059">	 
+    <META name="description" content="Our resturant will give you an unforgetable dining experience in Japanese cuisine.">
+    <META name="keywords" content="resturant,Hong Kong,dining,Japanese">
+        
+        
+    <title>Oishii Japanese Resturant Online Ordering System</title>
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="circle.css">
+
+
+    
+    <style>
+        
+        body{
+            background-image: url("http://www.hdwallpapersinn.com/wp-content/uploads/2014/08/wallpaper-festival-of-lights-floating-lanterns_2560x1600_94797.jpg");
+            background-repeat: no-repeat;
+            background-position: 50% 70%;
+        }
+        
+        form{
+            background-color: rgba(255,255,255,0.5);
+            border-radius: 3px;
+        }
+    
+        h1{
+            background: white;
+            color:black;
+            text-align: center;
+            text-shadow: 2px 2px rgb(95,158,160);
+        }
+        
+        
+        fieldset{
+            color:rgb(0,0,0);
+        }
+        
+        legend{
+            background:rgb(0,0,0);
+            color:white;
+            font-weight: bolder;
+        }
+        
+        label,.name{
+            background:rgb(0,0,0);
+            color:white;
+            font-weight: bolder;
+        }
+        
+        #total>fieldset{
+            color:white;
+        }
+        
+        #total legend{
+            background:white;
+            color:black;
+            font-weight: bolder;
+        }
+       
+    
+        fieldset{
+            margin-left: 1%;
+            margin-right:20%;
+            border: dotted;
+        
+        }
+        
+        
+        #salade,#goma,#pork,#beef,#chocolate,#sweets{
+            padding-left:10%;
+            padding-right:10%;
+            float:left;
+        }
+        
+        #akagai,#salmon,#tuna,#cola,#sprite,#beer{
+            padding-left:3%;
+            padding-right:3%;
+            float:left;
+        }
+        
+        #total{
+            float: right;
+            padding-left: 1%;
+            padding-right: 1%;
+        }
+        
+        #total>fieldset{
+            height:750px;
+            width:220px;
+        }
+        
+        #showTableNum{
+            font-size:20px;
+            text-align: center;
+            background: black;
+        }
+        
+        #showFood{
+            background: black;
+        }
+        
+        #totalPrice{
+            font-size:20px;
+        }
+    
+    </style>
+    
+  
+   <script type="text/javascript">
+    <!--
+    
+    var tableNum = "";
+    
+    function fillval() {
+      phtml=document.querySelector("#showTableNum");
+      if (window.location.search.substring(1)) {
+        phtml.innerHTML=window.location.search.substring(1);
+        tableNum=window.location.search.substring(1);
+      }
+      else {
+        phtml.innerHTML="No data sent";
+      }
+    }
+    
+    function addSalade(){
+        //get storage
+        var foodSelected=localStorage.getItem(tableNum);
+        var foodItem="";
+        if (foodSelected) {
+            foodItem = foodSelected.split("&");
+        }
+        var name=document.getElementById("saladeSelect").name;
+        var fullString="";
+        var subString="";
+        for (var i=0;i<foodItem.length;i++) {
+            if(foodItem[i].indexOf(name)>-1){
+                subString=foodItem[i];
+            }
+            else{
+                fullString+=foodItem[i]+"&";
+            }
+        }
+        var foodQtyPrice="";
+        var oldqty="";
+        var oldprice="";
+        
+        if (subString) {
+            foodQtyPrice=subString.split("*")[1];
+            oldqty=foodQtyPrice.split("=")[0];
+            oldprice=foodQtyPrice.split("=")[1];
+        }
+         
+        
+        //get option
+         var e = document.getElementById("saladeSelect");
+         var foodQty = e.options[e.selectedIndex].text;
+         var foodPrice = e.options[e.selectedIndex].value;
+         
+         //merge data
+         var oldqtyInt=parseInt(oldqty);
+         var newqtyInt=parseInt(foodQty);
+         if (oldqtyInt>0) {
+            newqtyInt+=oldqtyInt;
+         }
+         
+         
+         var oldpriceInt=parseInt(oldprice);
+         var newpriceInt=parseInt(foodPrice);
+         if (oldpriceInt>0) {
+         newpriceInt+=oldpriceInt;
+         }
+         
+         //show description
+         var description=e.name+"*"+newqtyInt + "=" +newpriceInt;
+         
+         
+         //set storage
+         fullString+=description;
+         localStorage.setItem(tableNum,fullString);
+         
+         
+         
+         load();
+
+    }
+    
+   
+    
+    function addGoma(){
+        //get storage
+        var foodSelected=localStorage.getItem(tableNum);
+        var foodItem="";
+        if (foodSelected) {
+            foodItem = foodSelected.split("&");
+        }
+        var name=document.getElementById("gomaSelect").name;
+        var fullString="";
+        var subString="";
+        for (var i=0;i<foodItem.length;i++) {
+            if(foodItem[i].indexOf(name)>-1){
+                subString=foodItem[i];
+            }
+            else{
+                fullString+=foodItem[i]+"&";
+            }
+        }
+        var foodQtyPrice="";
+        var oldqty="";
+        var oldprice="";
+        
+        if (subString) {
+            foodQtyPrice=subString.split("*")[1];
+            oldqty=foodQtyPrice.split("=")[0];
+            oldprice=foodQtyPrice.split("=")[1];
+        }
+         
+        
+        //get option
+         var e = document.getElementById("gomaSelect");
+         var foodQty = e.options[e.selectedIndex].text;
+         var foodPrice = e.options[e.selectedIndex].value;
+         
+         //merge data
+         var oldqtyInt=parseInt(oldqty);
+         var newqtyInt=parseInt(foodQty);
+         if (oldqtyInt>0) {
+            newqtyInt+=oldqtyInt;
+         }
+         
+         
+         var oldpriceInt=parseInt(oldprice);
+         var newpriceInt=parseInt(foodPrice);
+         if (oldpriceInt>0) {
+         newpriceInt+=oldpriceInt;
+         }
+         
+         
+         //show description
+         var description=e.name+"*"+newqtyInt + "=" +newpriceInt;
+         
+         
+         //set storage
+         fullString+=description;
+         localStorage.setItem(tableNum,fullString);
+         
+         load();
+         //document.getElementById("showFood").innerHTML=fullString;
+
+    }
+    
+    function addPork(){
+        //get storage
+        var foodSelected=localStorage.getItem(tableNum);
+        var foodItem="";
+        if (foodSelected) {
+            foodItem = foodSelected.split("&");
+        }
+        var name=document.getElementById("porkSelect").name;
+        var fullString="";
+        var subString="";
+        for (var i=0;i<foodItem.length;i++) {
+            if(foodItem[i].indexOf(name)>-1){
+                subString=foodItem[i];
+            }
+            else{
+                fullString+=foodItem[i]+"&";
+            }
+        }
+        var foodQtyPrice="";
+        var oldqty="";
+        var oldprice="";
+        
+        if (subString) {
+            foodQtyPrice=subString.split("*")[1];
+            oldqty=foodQtyPrice.split("=")[0];
+            oldprice=foodQtyPrice.split("=")[1];
+        }
+         
+        
+        //get option
+         var e = document.getElementById("porkSelect");
+         var foodQty = e.options[e.selectedIndex].text;
+         var foodPrice = e.options[e.selectedIndex].value;
+         
+         //merge data
+         var oldqtyInt=parseInt(oldqty);
+         var newqtyInt=parseInt(foodQty);
+         if (oldqtyInt>0) {
+            newqtyInt+=oldqtyInt;
+         }
+         
+         
+         var oldpriceInt=parseInt(oldprice);
+         var newpriceInt=parseInt(foodPrice);
+         if (oldpriceInt>0) {
+         newpriceInt+=oldpriceInt;
+         }
+         
+         
+         //show description
+         var description=e.name+"*"+newqtyInt + "=" +newpriceInt;
+         
+         
+         //set storage
+         fullString+=description;
+         localStorage.setItem(tableNum,fullString);
+         
+         load();
+         //document.getElementById("showFood").innerHTML=fullString;
+
+    }
+    
+     function addBeef(){
+        //get storage
+        var foodSelected=localStorage.getItem(tableNum);
+        var foodItem="";
+        if (foodSelected) {
+            foodItem = foodSelected.split("&");
+        }
+        var name=document.getElementById("beefSelect").name;
+        var fullString="";
+        var subString="";
+        for (var i=0;i<foodItem.length;i++) {
+            if(foodItem[i].indexOf(name)>-1){
+                subString=foodItem[i];
+            }
+            else{
+                fullString+=foodItem[i]+"&";
+            }
+        }
+        var foodQtyPrice="";
+        var oldqty="";
+        var oldprice="";
+        
+        if (subString) {
+            foodQtyPrice=subString.split("*")[1];
+            oldqty=foodQtyPrice.split("=")[0];
+            oldprice=foodQtyPrice.split("=")[1];
+        }
+         
+        
+        //get option
+         var e = document.getElementById("beefSelect");
+         var foodQty = e.options[e.selectedIndex].text;
+         var foodPrice = e.options[e.selectedIndex].value;
+         
+         //merge data
+         var oldqtyInt=parseInt(oldqty);
+         var newqtyInt=parseInt(foodQty);
+         if (oldqtyInt>0) {
+            newqtyInt+=oldqtyInt;
+         }
+         
+         
+         var oldpriceInt=parseInt(oldprice);
+         var newpriceInt=parseInt(foodPrice);
+         if (oldpriceInt>0) {
+         newpriceInt+=oldpriceInt;
+         }
+         
+         //show description
+         var description=e.name+"*"+newqtyInt + "=" +newpriceInt;
+         
+         
+         //set storage
+         fullString+=description;
+         localStorage.setItem(tableNum,fullString);
+         
+         
+         
+         load();
+
+    }
+    
+     function addAkagai(){
+        //get storage
+        var foodSelected=localStorage.getItem(tableNum);
+        var foodItem="";
+        if (foodSelected) {
+            foodItem = foodSelected.split("&");
+        }
+        var name=document.getElementById("akagaiSelect").name;
+        var fullString="";
+        var subString="";
+        for (var i=0;i<foodItem.length;i++) {
+            if(foodItem[i].indexOf(name)>-1){
+                subString=foodItem[i];
+            }
+            else{
+                fullString+=foodItem[i]+"&";
+            }
+        }
+        var foodQtyPrice="";
+        var oldqty="";
+        var oldprice="";
+        
+        if (subString) {
+            foodQtyPrice=subString.split("*")[1];
+            oldqty=foodQtyPrice.split("=")[0];
+            oldprice=foodQtyPrice.split("=")[1];
+        }
+         
+        
+        //get option
+         var e = document.getElementById("akagaiSelect");
+         var foodQty = e.options[e.selectedIndex].text;
+         var foodPrice = e.options[e.selectedIndex].value;
+         
+         //merge data
+         var oldqtyInt=parseInt(oldqty);
+         var newqtyInt=parseInt(foodQty);
+         if (oldqtyInt>0) {
+            newqtyInt+=oldqtyInt;
+         }
+         
+         
+         var oldpriceInt=parseInt(oldprice);
+         var newpriceInt=parseInt(foodPrice);
+         if (oldpriceInt>0) {
+         newpriceInt+=oldpriceInt;
+         }
+         
+         //show description
+         var description=e.name+"*"+newqtyInt + "=" +newpriceInt;
+         
+         
+         //set storage
+         fullString+=description;
+         localStorage.setItem(tableNum,fullString);
+         
+         
+         
+         load();
+
+    }
+    
+   function addSalmon(){
+        //get storage
+        var foodSelected=localStorage.getItem(tableNum);
+        var foodItem="";
+        if (foodSelected) {
+            foodItem = foodSelected.split("&");
+        }
+        var name=document.getElementById("salmonSelect").name;
+        var fullString="";
+        var subString="";
+        for (var i=0;i<foodItem.length;i++) {
+            if(foodItem[i].indexOf(name)>-1){
+                subString=foodItem[i];
+            }
+            else{
+                fullString+=foodItem[i]+"&";
+            }
+        }
+        var foodQtyPrice="";
+        var oldqty="";
+        var oldprice="";
+        
+        if (subString) {
+            foodQtyPrice=subString.split("*")[1];
+            oldqty=foodQtyPrice.split("=")[0];
+            oldprice=foodQtyPrice.split("=")[1];
+        }
+         
+        
+        //get option
+         var e = document.getElementById("salmonSelect");
+         var foodQty = e.options[e.selectedIndex].text;
+         var foodPrice = e.options[e.selectedIndex].value;
+         
+         //merge data
+         var oldqtyInt=parseInt(oldqty);
+         var newqtyInt=parseInt(foodQty);
+         if (oldqtyInt>0) {
+            newqtyInt+=oldqtyInt;
+         }
+         
+         
+         var oldpriceInt=parseInt(oldprice);
+         var newpriceInt=parseInt(foodPrice);
+         if (oldpriceInt>0) {
+         newpriceInt+=oldpriceInt;
+         }
+         
+         //show description
+         var description=e.name+"*"+newqtyInt + "=" +newpriceInt;
+         
+         
+         //set storage
+         fullString+=description;
+         localStorage.setItem(tableNum,fullString);
+         
+         
+         
+         load();
+
+    }
+    
+    function addTuna(){
+        //get storage
+        var foodSelected=localStorage.getItem(tableNum);
+        var foodItem="";
+        if (foodSelected) {
+            foodItem = foodSelected.split("&");
+        }
+        var name=document.getElementById("tunaSelect").name;
+        var fullString="";
+        var subString="";
+        for (var i=0;i<foodItem.length;i++) {
+            if(foodItem[i].indexOf(name)>-1){
+                subString=foodItem[i];
+            }
+            else{
+                fullString+=foodItem[i]+"&";
+            }
+        }
+        var foodQtyPrice="";
+        var oldqty="";
+        var oldprice="";
+        
+        if (subString) {
+            foodQtyPrice=subString.split("*")[1];
+            oldqty=foodQtyPrice.split("=")[0];
+            oldprice=foodQtyPrice.split("=")[1];
+        }
+         
+        
+        //get option
+         var e = document.getElementById("tunaSelect");
+         var foodQty = e.options[e.selectedIndex].text;
+         var foodPrice = e.options[e.selectedIndex].value;
+         
+         //merge data
+         var oldqtyInt=parseInt(oldqty);
+         var newqtyInt=parseInt(foodQty);
+         if (oldqtyInt>0) {
+            newqtyInt+=oldqtyInt;
+         }
+         
+         
+         var oldpriceInt=parseInt(oldprice);
+         var newpriceInt=parseInt(foodPrice);
+         if (oldpriceInt>0) {
+         newpriceInt+=oldpriceInt;
+         }
+         
+         //show description
+         var description=e.name+"*"+newqtyInt + "=" +newpriceInt;
+         
+         
+         //set storage
+         fullString+=description;
+         localStorage.setItem(tableNum,fullString);
+         
+         
+         
+         load();
+
+    }
+    
+    function addCola(){
+        //get storage
+        var foodSelected=localStorage.getItem(tableNum);
+        var foodItem="";
+        if (foodSelected) {
+            foodItem = foodSelected.split("&");
+        }
+        var name=document.getElementById("colaSelect").name;
+        var fullString="";
+        var subString="";
+        for (var i=0;i<foodItem.length;i++) {
+            if(foodItem[i].indexOf(name)>-1){
+                subString=foodItem[i];
+            }
+            else{
+                fullString+=foodItem[i]+"&";
+            }
+        }
+        var foodQtyPrice="";
+        var oldqty="";
+        var oldprice="";
+        
+        if (subString) {
+            foodQtyPrice=subString.split("*")[1];
+            oldqty=foodQtyPrice.split("=")[0];
+            oldprice=foodQtyPrice.split("=")[1];
+        }
+         
+        
+        //get option
+         var e = document.getElementById("colaSelect");
+         var foodQty = e.options[e.selectedIndex].text;
+         var foodPrice = e.options[e.selectedIndex].value;
+         
+         //merge data
+         var oldqtyInt=parseInt(oldqty);
+         var newqtyInt=parseInt(foodQty);
+         if (oldqtyInt>0) {
+            newqtyInt+=oldqtyInt;
+         }
+         
+         
+         var oldpriceInt=parseInt(oldprice);
+         var newpriceInt=parseInt(foodPrice);
+         if (oldpriceInt>0) {
+         newpriceInt+=oldpriceInt;
+         }
+         
+         //show description
+         var description=e.name+"*"+newqtyInt + "=" +newpriceInt;
+         
+         
+         //set storage
+         fullString+=description;
+         localStorage.setItem(tableNum,fullString);
+         
+         
+         
+         load();
+
+    }
+  
+  function addSprite(){
+        //get storage
+        var foodSelected=localStorage.getItem(tableNum);
+        var foodItem="";
+        if (foodSelected) {
+            foodItem = foodSelected.split("&");
+        }
+        var name=document.getElementById("spriteSelect").name;
+        var fullString="";
+        var subString="";
+        for (var i=0;i<foodItem.length;i++) {
+            if(foodItem[i].indexOf(name)>-1){
+                subString=foodItem[i];
+            }
+            else{
+                fullString+=foodItem[i]+"&";
+            }
+        }
+        var foodQtyPrice="";
+        var oldqty="";
+        var oldprice="";
+        
+        if (subString) {
+            foodQtyPrice=subString.split("*")[1];
+            oldqty=foodQtyPrice.split("=")[0];
+            oldprice=foodQtyPrice.split("=")[1];
+        }
+         
+        
+        //get option
+         var e = document.getElementById("spriteSelect");
+         var foodQty = e.options[e.selectedIndex].text;
+         var foodPrice = e.options[e.selectedIndex].value;
+         
+         //merge data
+         var oldqtyInt=parseInt(oldqty);
+         var newqtyInt=parseInt(foodQty);
+         if (oldqtyInt>0) {
+            newqtyInt+=oldqtyInt;
+         }
+         
+         
+         var oldpriceInt=parseInt(oldprice);
+         var newpriceInt=parseInt(foodPrice);
+         if (oldpriceInt>0) {
+         newpriceInt+=oldpriceInt;
+         }
+         
+         //show description
+         var description=e.name+"*"+newqtyInt + "=" +newpriceInt;
+         
+         
+         //set storage
+         fullString+=description;
+         localStorage.setItem(tableNum,fullString);
+         
+         
+         
+         load();
+
+    }
+    
+    function addBeer(){
+        //get storage
+        var foodSelected=localStorage.getItem(tableNum);
+        var foodItem="";
+        if (foodSelected) {
+            foodItem = foodSelected.split("&");
+        }
+        var name=document.getElementById("beerSelect").name;
+        var fullString="";
+        var subString="";
+        for (var i=0;i<foodItem.length;i++) {
+            if(foodItem[i].indexOf(name)>-1){
+                subString=foodItem[i];
+            }
+            else{
+                fullString+=foodItem[i]+"&";
+            }
+        }
+        var foodQtyPrice="";
+        var oldqty="";
+        var oldprice="";
+        
+        if (subString) {
+            foodQtyPrice=subString.split("*")[1];
+            oldqty=foodQtyPrice.split("=")[0];
+            oldprice=foodQtyPrice.split("=")[1];
+        }
+         
+        
+        //get option
+         var e = document.getElementById("beerSelect");
+         var foodQty = e.options[e.selectedIndex].text;
+         var foodPrice = e.options[e.selectedIndex].value;
+         
+         //merge data
+         var oldqtyInt=parseInt(oldqty);
+         var newqtyInt=parseInt(foodQty);
+         if (oldqtyInt>0) {
+            newqtyInt+=oldqtyInt;
+         }
+         
+         
+         var oldpriceInt=parseInt(oldprice);
+         var newpriceInt=parseInt(foodPrice);
+         if (oldpriceInt>0) {
+         newpriceInt+=oldpriceInt;
+         }
+         
+         //show description
+         var description=e.name+"*"+newqtyInt + "=" +newpriceInt;
+         
+         
+         //set storage
+         fullString+=description;
+         localStorage.setItem(tableNum,fullString);
+         
+         
+         
+         load();
+
+    }
+    
+    function addChocolate(){
+        //get storage
+        var foodSelected=localStorage.getItem(tableNum);
+        var foodItem="";
+        if (foodSelected) {
+            foodItem = foodSelected.split("&");
+        }
+        var name=document.getElementById("chocolateSelect").name;
+        var fullString="";
+        var subString="";
+        for (var i=0;i<foodItem.length;i++) {
+            if(foodItem[i].indexOf(name)>-1){
+                subString=foodItem[i];
+            }
+            else{
+                fullString+=foodItem[i]+"&";
+            }
+        }
+        var foodQtyPrice="";
+        var oldqty="";
+        var oldprice="";
+        
+        if (subString) {
+            foodQtyPrice=subString.split("*")[1];
+            oldqty=foodQtyPrice.split("=")[0];
+            oldprice=foodQtyPrice.split("=")[1];
+        }
+         
+        
+        //get option
+         var e = document.getElementById("chocolateSelect");
+         var foodQty = e.options[e.selectedIndex].text;
+         var foodPrice = e.options[e.selectedIndex].value;
+         
+         //merge data
+         var oldqtyInt=parseInt(oldqty);
+         var newqtyInt=parseInt(foodQty);
+         if (oldqtyInt>0) {
+            newqtyInt+=oldqtyInt;
+         }
+         
+         
+         var oldpriceInt=parseInt(oldprice);
+         var newpriceInt=parseInt(foodPrice);
+         if (oldpriceInt>0) {
+         newpriceInt+=oldpriceInt;
+         }
+         
+         //show description
+         var description=e.name+"*"+newqtyInt + "=" +newpriceInt;
+         
+         
+         //set storage
+         fullString+=description;
+         localStorage.setItem(tableNum,fullString);
+         
+         
+         
+         load();
+
+    }
+    
+    function addSweet(){
+        //get storage
+        var foodSelected=localStorage.getItem(tableNum);
+        var foodItem="";
+        if (foodSelected) {
+            foodItem = foodSelected.split("&");
+        }
+        var name=document.getElementById("sweetSelect").name;
+        var fullString="";
+        var subString="";
+        for (var i=0;i<foodItem.length;i++) {
+            if(foodItem[i].indexOf(name)>-1){
+                subString=foodItem[i];
+            }
+            else{
+                fullString+=foodItem[i]+"&";
+            }
+        }
+        var foodQtyPrice="";
+        var oldqty="";
+        var oldprice="";
+        
+        if (subString) {
+            foodQtyPrice=subString.split("*")[1];
+            oldqty=foodQtyPrice.split("=")[0];
+            oldprice=foodQtyPrice.split("=")[1];
+        }
+         
+        
+        //get option
+         var e = document.getElementById("sweetSelect");
+         var foodQty = e.options[e.selectedIndex].text;
+         var foodPrice = e.options[e.selectedIndex].value;
+         
+         //merge data
+         var oldqtyInt=parseInt(oldqty);
+         var newqtyInt=parseInt(foodQty);
+         if (oldqtyInt>0) {
+            newqtyInt+=oldqtyInt;
+         }
+         
+         
+         var oldpriceInt=parseInt(oldprice);
+         var newpriceInt=parseInt(foodPrice);
+         if (oldpriceInt>0) {
+         newpriceInt+=oldpriceInt;
+         }
+         
+         //show description
+         var description=e.name+"*"+newqtyInt + "=" +newpriceInt;
+         
+         
+         //set storage
+         fullString+=description;
+         localStorage.setItem(tableNum,fullString);
+         
+         
+         
+         load();
+
+    }
+    
+ function load(){
+        var foodSelected=localStorage.getItem(tableNum);
+        var splitItem=foodSelected.split("&");
+        var fullString="";
+        for(var i=0;i<splitItem.length;i++){
+            splitItem[i]+="<p></p>";
+            fullString+=splitItem[i];
+        }
+        document.getElementById("showFood").innerHTML=fullString;
+        
+        
+    }
+  
+ function clearStorage(){
+    window.localStorage.clear();
+ }
+ 
+ function calTotal(){
+    var total=0;
+    var foodItem=localStorage.getItem(tableNum);
+     var singleItem=null;
+    if (foodItem!="") {
+       singleItem=foodItem.split("&");
+    }
+
+    for (var i=0;i<singleItem.length;i++){
+        var foodQty=singleItem[i].split("*");
+        var foodPrice=foodQty[1].split("=")[1];
+        var priceInt=parseInt(foodPrice);
+        total+=priceInt;
+    }
+    document.getElementById("totalPrice").innerHTML=total;
+    
+    }
+   
+    -->
+    </script>
+      
+</head>
+
+
+
+<body onload="fillval(); load(); ">
+    
+	<div id="image">
+	    <img alt="My image" src="../image/oishiibannerlogo.jpg" class="hover"/>
+		<p class="text">
+		    <a href ="#aboutUs">Click here back to the mainpage</a>
+		</p>
+	</div>
+    
+	<br/>
+	<div id="navigation">
+	    <a href ="../html/AboutUs.html#aboutUs">About Us</a>
+	    <a href ="../html/Access.html#access">Access</a>
+	    <a href ="../html/Menu.html#menu">Menu</a>
+	    <a href ="../html/Order1.html#order1">Order</a>
+	    <a href="../html/Design.html" target="_blank">Design</a>
+	</div>
+    
+    
+	<div id="contact">
+        <p>
+            We are a Hong Kong-based Japanese resturant founded in 1993. We mainly sell the traditional Japanese Barbecue(Yakiniku).
+            Welcome to make a reservation through Tel: 21234567 or E-mail: oishii@oishii.com.hk.
+        </p>
+	</div>
+	
+        <hr>
+    
+    
+    <h1>Oishii Japanese Resturant Online Ordering System</h1>
+    
+    <div id="total">
+        <fieldset>
+            <legend>TOTAL</legend>
+                <p id="showTableNum"></p>
+                <p id="showFood"></p>
+                <input type="button" value="Check out" onclick="calTotal(); clearStorage();">
+                <a href="../html/Order1.html">&nbsp;&nbsp;&nbsp;Back</a>
+                <p id="totalPrice"></p>
+                
+        </fieldset>
+        
+            
+        </div>
+            
+
+
+         
+        <div id="starter">              
+        <fieldset>
+        <legend>STARTER</legend>
+        
+        
+        <div id="salade">
+            <span class="name">Chuka Salada</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <label>Quantity:</label>
+        <select id="saladeSelect" name="Chuka Salade HKD33">
+            <option value="33">1</option>
+            <option value="66">2</option>
+            <option value="99">3</option>
+        </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        <input type="button" value="Add" onclick="addSalade();"/><br/>
+        <div id="circle1">
+        
+        </div>
+        <br/>
+        </div>
+        
+        <div id="goma">
+            <span class="name">Goma Iidako</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  
+        
+        <label>Quantity:</label>
+        
+        <select id="gomaSelect" name="Goma Iidako HKD33">
+            <option value="33">1</option>
+            <option value="66">2</option>
+            <option value="99">3</option>
+        </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        <input type="button" value="Add" onclick="addGoma();"/><br/>
+        <div id="circle2">
+        
+        </div>
+        <br/>
+        </div>
+
+        
+        </fieldset>
+        </div> 
+
+        
+        <div id="bbq">
+        <fieldset>
+        <legend>JAPANESE BARBECUE</legend>
+
+        <div id="pork">
+            <span class="name">Pork 100g</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+    
+        <label>Quantity:</label>
+        <select id="porkSelect" name="Pork 100g HKD88">
+            <option value="88">1</option>
+            <option value="176">2</option>
+            <option value="264">3</option>
+        </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   
+        
+        <input type="button" value="Add" onclick="addPork();"/><br/>
+        <div id="circle3">
+       
+        </div>
+        <br/>
+        </div>
+
+        
+ 
+        <div id="beef">
+            <span class="name">Beef 100g</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+ 
+        <label>Quantity:</label>
+        <select id="beefSelect" name="Beef 100g HKD88">
+            <option value="88">1</option>
+            <option value="176">2</option>
+            <option value="264">3</option>
+        </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        
+        <input type="button" value="Add"  onclick="addBeef();"/><br/>
+        <div id="circle4">
+        
+        </div>
+        <br/>
+        </div>
+    
+        
+    </fieldset>
+    </div>
+     
+        <div id="sashimi">
+        <fieldset>
+        <legend>SASHIMI</legend>
+
+        <div id="akagai">
+            <span class="name">Fresh Akagai 100g </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+
+        <label>Quantity:</label>
+        <select id="akagaiSelect" name="Fresh Akagai 100g HKD120">
+            <option value="120">1</option>
+            <option value="240">2</option>
+            <option value="360">3</option>
+        </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        
+        <input type="button" value="Add" onclick="addAkagai();"/><br/>
+        <div id="circle5">
+     
+        </div>
+        <br/>
+        </div>
+
+        
+ 
+        <div id ="salmon">
+            <span class="name">Fresh Salmon</span> 100g &nbsp;&nbsp;&nbsp;
+        
+  
+        <label>Quantity:</label>
+        <select id="salmonSelect" name="Fresh Salmon HKD120">
+            <option value="120">1</option>
+            <option value="240">2</option>
+            <option value="360">3</option>
+        </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  
+        
+        <input type="button" value="Add"  onclick="addSalmon();"/><br/>
+        <div id="circle6">
+  
+        </div>
+        <br/>
+        </div>
+
+   
+
+        <div id="tuna">
+            <span class="name">Fresh Tuna fish 100g</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+      
+        <label>Quantity:</label>
+        <select id="tunaSelect" name="Fresh Tuna HKD120">
+            <option value="120">1</option>
+            <option value="240">2</option>
+            <option value="360">3</option>
+        </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  
+        
+        <input type="button" value="Add"  onclick="addTuna();"><br/>
+        <div id="circle7">
+
+        </div>
+        <br/>
+        </div>
+        
+  
+        </fieldset>
+        </div>
+        
+        <div id="drinks">
+        <fieldset>
+        <legend>DRINKS</legend>
+
+        <div id="cola">
+            <span class="name">Coca Cola</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+       
+        <label>Quantity:</label>
+        <select id="colaSelect" name="Coca Cola HKD10"> 
+            <option value="10">1</option>
+            <option value="20">2</option>
+            <option value="30">3</option>
+        </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ 
+        
+        <input type="button" value="Add"  onclick="addCola();"/><br/>
+        <div id="circle8">
+
+        </div>
+        <br/>
+        </div>
+  
+        
+
+        <div id="sprite">
+            <span class="name">Sprite</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+
+        <label>Quantity:</label>
+        <select id="spriteSelect" name="Sprite HKD10">
+            <option value="10">1</option>
+            <option value="20">2</option>
+            <option value="30">3</option>
+        </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        <input type="button" value="Add" onclick="addSprite();"/><br/>
+        <div id="circle9">
+
+        </div>
+        <br/>
+  
+        </div>
+    
+        
+  
+        <div id="beer">
+            <span class="name">Asahi beer</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+  
+        <label>Quantity:</label>
+        <select id="beerSelect" name="Asashi beer HKD12">
+            <option value="12">1</option>
+            <option value="24">2</option>
+            <option value="36">3</option>
+        </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <input type="button" value="Add" onclick="addBeer();"/><br/>
+        <div id="circle10">
+
+        </div>
+        <br/>
+  
+        </div>
+     
+        
+        </fieldset>
+        </div>
+ 
+        <div id="dessert">
+        <fieldset>
+        <legend>DESSERT</legend>
+
+        <div id="chocolate">
+            <span class="name">Handmade chocolate</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        <label>Quantity:</label>
+        <select id="chocolateSelect" name="Handmade Chocolate HKD25">
+            <option value="25">1</option>
+            <option value="50">2</option>
+            <option value="75">3</option>
+        </select>&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <input type="button" value="Add" onclick="addChocolate();"/><br/>
+        <div id="circle11">
+
+        </div>
+        <br/>
+        </div>
+  
+        
+
+        <div id="sweets">
+            <span class="name">Sweets</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <label>Quantity:</label>
+        <select id="sweetSelect" name="Sweets HKD25">
+            <option value="25">1</option>
+            <option value="50">2</option>
+            <option value="75">3</option>
+        </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <input type="button" value="Add" onclick="addSweet();"/><br/>
+        <div id="circle12">
+
+        </div>
+        <br/>
+        </div>
+        </fieldset>
+        </div>
+        
+    <!--</form>-->
+    
+         
+<hr>
+<div id="footer">
+    <p>Copyright. Lee Ho Ying 2015. All rights reserved.</p>
+</div>
+
+</body>
+
+</html>
+

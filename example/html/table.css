@@ -1,0 +1,89 @@
+#table1,#table2,#table9,#table10{
+    height:18%;
+    width:24%;
+    background: rgb(139,69,19);
+    text-align: center;
+    padding-top: 15%;
+}
+
+#table1,#table2,#table3,#table4,#table5,#table6,#table7,#table8,#table9,#table10{
+    border:double;
+}
+
+#table1,#table9{
+    float:right;
+    margin-right: 5%;
+}
+
+#table3,#table4,#table5,#table6,#table7,#table8{
+    height:8%;
+    width:14%;
+    background: rgb(139,69,19);
+    text-align: center;
+    padding-top: 5%;
+}
+
+#table3{
+    display: block;
+    float:right;
+    position: relative;
+    left:-7%;
+    margin:5%;
+}
+
+#table4{
+    display: block;
+    float:right;
+    position: relative;
+    left:-18%;
+    margin:5%;
+}
+
+#table5{
+    display: block;
+    float:right;
+    position: relative;
+    left:-30%;
+    margin:5%;
+}
+
+#table6{
+    display: block;
+    clear:both;
+    float:right;
+    position: relative;
+    left:-7%;
+    margin:5%;
+}
+
+#table7{
+    display: block;
+    float:right;
+    position: relative;
+    left:-18%;
+    margin:5%;
+}
+
+#table8{
+    display: block;
+    float:right;
+    position: relative;
+    left:-30%;
+    margin:5%;
+}
+
+#table9{
+    display: block;
+    clear:both;
+    float:right;
+
+}
+
+#table10{
+    display: block;
+    float:right;
+    position: relative;
+    left:-45%;
+
+}
+

@@ -1,0 +1,99 @@
+        #circle1{
+            height:200px;
+            width:200px;
+            background-image: url("http://thumbs.dreamstime.com/t/salada-da-alga-de-chuka-wakame-41438475.jpg");
+            border-radius: 50%;
+        }
+        
+        #circle2{
+            height:200px;
+            width:200px;
+            background-image: url("http://www.mitsumoto.com.hk/Product/frozen/f00099926.jpg");
+            border-radius: 50%;
+            background-position: 50%,50%;
+        }
+        
+        #circle3{
+            height:200px;
+            width:200px;
+            background-image: url("http://s3-media2.fl.yelpcdn.com/bphoto/dFAZJsdMtOA3_U86_KWWXg/348s.jpg");
+            background-position: 50%,50%;
+            border-radius: 50%;
+        }
+        
+        #circle4{
+            height:200px;
+            width:200px;
+            background-image: url("http://www.yakinikuyajapanesebbq.com/wp/wp-content/themes/yakinikuya/images/menu_detail_beefbbq03.jpg");
+            border-radius: 50%;
+            background-position: 50%,50%;
+        }
+        
+        #circle5{
+            height:200px;
+            width:200px;
+            background-image: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRjkqyCI0h85WdYV-YCooJiixAppPfT-ejhLUJkt-HnHyUn7cXg");
+            border-radius: 50%;
+            background-position: 50%,50%;
+        }
+        
+        #circle6{
+            height:200px;
+            width:200px;
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdj2Ipe-BazytKTpQkylbqi8JyMN_jRQxqqsVXWpmMUIokgMq53g");
+            border-radius: 50%;
+            background-position: 50%,50%;
+        }
+        
+        #circle7{
+            height:200px;
+            width:200px;
+            background-image: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS-UBn1GnF1LFswm55dawhl_IdcxSgu7HBWq0wLEzERNQddVYEE");
+            border-radius: 50%;
+            background-position: 50%,50%;
+        }
+        
+        #circle8{
+            height:200px;
+            width:200px;
+            background-image: url("http://4.bp.blogspot.com/-5fy-_8IIXD0/UOMiIieTVBI/AAAAAAAAHng/tTPrHa0fi3k/s1600/coca_cola.jpg");
+            border-radius: 50%;
+            background-position: 50%,50%;
+        }
+        
+         #circle9{
+            height:200px;
+            width:200px;
+            background-image: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRrz1g88yfPvj0tbdyMB7R_WYhXdZgjN2xwQvrBX3yLCD_rrSq1nA");
+            border-radius: 50%;
+            background-position: 50%,50%;
+        }
+        
+         #circle10{
+            height:200px;
+            width:200px;
+            background-image: url("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTZrxNEdh3kdyImCDZC2aWbaqMcyB-UxBw2g-BgKDDBIJXtznPQ");
+            border-radius: 50%;
+            background-position: 50%,50%;
+        }
+        
+         #circle11{
+            height:200px;
+            width:200px;
+            background-image: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT3YQIb36r-nLiYqXRleQufbOWcArD6wPAXIqy7C5-OGAU9gRrgUw");
+            border-radius: 50%;
+            background-position: 50%,50%;
+        }
+        
+         #circle12{
+            height:200px;
+            width:200px;
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXyUF_oSXhN1gOUrgUTUq6-GLHpZPOQXKh6t1B0bDmr5wYCHjP");
+            border-radius: 50%;
+            background-position: 50%,50%;
+        }
+        
+        #circle1,#circle2,#circle3,#circle4,#circle5,#circle6,#circle7,#circle8,#circle9,#circle10,#circle11,#circle12{
+            border: groove 5px;
+            color:white;
+        }

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html>
+        
+<head>
+    
+    <META charset="utf-8">     
+    <META name="GENERATOR" content="MSHTML 11.00.9600.17496"> 	 
+    <META name="author" content="Lee Ho Ying 53552059">	 
+    <META name="description" content="Our resturant will give you an unforgetable dining experience in Japanese cuisine.">
+    <META name="keywords" content="resturant,Hong Kong,dining,Japanese">
+	
+    <title>Oishii Japanese Resturant</title>
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+	
+    <style>
+    
+    body{
+	background-image: url("http://foodswol.com/wp-content/uploads/2014/05/Japan-Food-Sushi-Fish-Food1.jpg"); 
+        background-repeat: no-repeat; 
+        background-position: 50% 117%;
+    }
+    
+    #seat{
+	height:100px;
+	width:200px;
+	background-color: rgba(95,158,160,0.5);
+	float: right;
+	border: dashed 1px;
+	color:white;
+	border-radius: 3px;
+	margin-left: 3%;
+	margin-right: 3%;
+	margin-top: 10%;
+	text-align: center;
+    }
+    
+    #introduction{
+	background:rgb(138,43,226);
+	width:1000px;
+	height:30px;
+	color:rgb(230,230,250);
+	border-radius:3px;
+	font-size:20px;
+	text-align: center;
+	
+    }
+    
+    #barbecue{
+	background:rgb(255,0,0);
+	width:1000px;
+	height:50px;
+	color:rgb( 255,160,122 );
+	border-radius:3px;
+	text-align: center;
+    }
+    
+    #chocolate{
+	background:rgb(210,105,30);
+	width:1000px;
+	height:50px;
+	color:white;
+	border-radius:3px;
+	text-align: center;
+    }
+    
+    #sweets{
+	background:rgb(255,105,180);
+	width:1000px;
+	height:30px;
+	color:rgb(255,192,203);
+	border-radius:3px;
+	text-align: center;
+    }
+    
+    #aboutUs{
+            background:rgba(105,105,105,0.5);
+            width:1000px;
+	    margin-left: 20%;
+	    margin-right: 20%;
+		margin-top: 4%;
+        }
+    
+    video{
+	height:350px;
+	width:550px;
+	margin-left: 23%;
+	margin-right: 10%;
+    }
+    
+	#promo{
+		background:red;
+		height:5%;
+		width:23%;
+		text-align: center;
+		color:white;
+		position:absolute;
+		left:0px;
+
+	}
+		
+
+    </style>
+	
+	
+	
+</head>
+
+<body>
+
+	
+	<div id="image">
+	    <img alt="My image" src="../image/oishiibannerlogo.jpg" class="hover"/>
+		<p class="text">
+		    <a href ="#aboutUs">Click here back to the mainpage</a>
+		</p>
+	</div>
+    
+	<br/>
+	<div id="navigation">
+	    <a href ="#aboutUs">About Us</a>
+	    <a href ="../html/Access.html#access">Access</a>
+	    <a href ="../html/Menu.html#menu">Menu</a>
+	    <a href ="../html/Order1.html#order1">Order</a>
+	    <a href="../html/Design.html" target="_blank">Design</a>
+	</div>
+    
+    
+	<div id="contact">
+        <p>
+            We are a Hong Kong-based Japanese resturant founded in 1993. We mainly sell the traditional Japanese Barbecue(Yakiniku).
+            Welcome to make a reservation through Tel: 21234567 or E-mail: oishii@oishii.com.hk.
+        </p>
+	</div>
+		<hr>
+
+	<div id="promo" onmouseover="stopMoving()" onmouseout="moving()">
+		<h3>Get a 30% off by using VISA credit card!!!</h3>
+	</div>
+
+		<script type="text/javascript">
+		var width=document.body.offsetWidth-400;
+		var left=0;
+		var flag='add';
+
+		
+		function moving(){
+				
+		if(left>=width){
+		flag='cut';
+		}
+		
+		if(left<=0){
+		flag='add';
+		}
+		
+		
+		
+		if(flag=='add'){
+		left+=2;
+		}
+		
+		else if(flag=='cut'){
+		left-=2;
+		}
+		
+	
+		var promo=document.getElementById("promo");
+		promo.style.left=left+"px";
+		timeOut=setTimeout("moving()",10);
+	
+		
+		}
+		
+		 function stopMoving() {
+			 clearTimeout(timeOut);
+			
+        }
+	
+		
+		setTimeout("moving()",100);
+	
+		
+		</script>
+
+     
+	    
+	<div id="seat">
+	    <p>We provide 64 seats.<br/>Opening hours: 12noon to 10p.m. everyday</p>
+	</div>
+	
+	<div id="aboutUs">
+	  
+	    <div id="introduction">
+            <p>
+                Wanting to try some traditonal Japanese food but don't know where to find?
+                We are here waiting for you! Don't hesitate!
+            </p>
+	    </div>
+	    
+
+	    <video controls="controls">
+		<source src="http://courses.cs.cityu.edu.hk/cs2204/barbecue.ogg" type="video/ogg" />
+		<source src="http://courses.cs.cityu.edu.hk/cs2204/barbecue.mp4" type="video/mp4" />
+		<h2>Your browser does not support this video format</h2> 
+	    </video>
+	
+
+	
+	    <div id="barbecue">
+		<p>
+		    Japanese Barbecue(Yakiniku) is the most famous dish in our resturant. We use the pork and beef shipped from Kobe,
+		    and cooked them by dry distillation(sumibi), which gives you a taste of nature.
+		    Customer is recommended to enjoy it with the special sauce made by us.
+		</p>
+	    </div>
+	    
+	
+	    <video controls="controls"> 
+		<source src="http://courses.cs.cityu.edu.hk/cs2204/chocolate.ogg" type="video/ogg" />
+		<source src="http://courses.cs.cityu.edu.hk/cs2204/chocolate.mp4" type="video/mp4" />
+		<h2>Your browser does not support this video format</h2> 
+	    </video>
+
+	    
+    
+	    <div id="chocolate"><!-- Your video cannot be rendered in IE, but can render in Chrome, Safari,Firefox -->
+		<p>
+		    After finishing the main dish, customer is recommended to try the handmade chocolate to finish the whole dining.
+		    You can choose the one with matcha-favor, toffee-favor or strawberry-favor.
+		</p>
+	    </div>
+	
+	
+	    <video controls="controls">
+		<source src="http://courses.cs.cityu.edu.hk/cs2204/sweets.ogg" type="video/ogg" />
+		<source src="http://courses.cs.cityu.edu.hk/cs2204/sweets.mp4" type="video/mp4" />
+		<h2>Your browser does not support this video format</h2> 
+	    </video>
+
+
+	
+	    <div id="sweets">
+		<p>
+		    If you don't love chocolate as dessert, no problem! We have alternative choice for you. Sweets with matcha or nut are waiting for you!
+		</p>
+	    </div>
+
+    </div>
+   
+    <hr>
+        
+
+
+<div id="footer">
+    <p>Copyright. Lee Ho Ying 2015. All rights reserved.</p>
+</div>
+
+</body>
+
+</html>
