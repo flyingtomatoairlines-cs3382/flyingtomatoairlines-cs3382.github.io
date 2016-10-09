@@ -15,7 +15,7 @@ i<!DOCTYPE html>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="../css/half-slider.css" rel="stylesheet">
+    <!--<link href="../css/half-slider.css" rel="stylesheet">-->
     <link href="../css/main.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -26,36 +26,23 @@ i<!DOCTYPE html>
     <![endif]-->
     
     <style>
-	    
-a{
-	color:#ffffff;
-	text-decoration: none;
-    }
-    
-    #image img{
-	display:block;
+
+    .image img{
+	   display:block;
+
     }
 	    
-    #image .text{
-	opacity:0;
-	position:absolute;
-	bottom:10px;
-	left:0px;
-	right:0px;
-	padding:0px 0px;
-	background:rgb(47,79,79);
-	text-decoration:none;
-	text-align: center;
-	font-size:30px;
-	-webkit-transition: opacity 500ms;
-	-moz-transition: opacity 500ms;
-	-o-transition: opacity 500ms;
-	transition: opacity 500ms;
+    .hiddenText{
+	display:none;
+    padding: 30px 18px;
     }
-    
-    #image:hover .text{
-	opacity:0.8;
-    }
+
+    .image .hiddenText .show {
+    opacity: 1;
+    max-height: 500px;  
+
+}
+   
     </style>
 </head>
 
@@ -99,8 +86,8 @@ a{
                             
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Membership <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="/flyingtomatoairlines-cs3382.github.io/login.html">Login</a></li>
-                                <li><a href="/flyingtomatoairlines-cs3382.github.io/register.html">Register</a></li>
+                                <li><a href="/login.html">Login</a></li>
+                                <li><a href="/register.html">Register</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -127,15 +114,19 @@ a{
 
         <div class="container-fluid bg-grey">
             <div class="image">
-               <img src="https://www.ubs.com/global/en/about_ubs/careers/graduate-and-intern/_jcr_content/par/dynamicteaser_440f/dynamicteaserelement_2/image.151829192.img/_34Q4224_small.jpeg" alt="HTML5 Icon" class="hover" style="width:945px;height:470px;"><br>
-               <p class="text">
-		       <a href="http://flyingtomatoairlines-cs3382.github.io">Students and Graduates</a>
-		       </p>
-               <img src="http://www.schroders.com/en/SysGlobalAssets/digital/careers/hero_experienced_hires_edited.jpg" alt="HTML5 Icon" class="hover" style="width:945px;height:470px;">
-               <p class="text">
-		       <a href="http://flyingtomatoairlines-cs3382.github.io">Experienced Hire</a>
-		       </p>
+               <img src="https://www.ubs.com/global/en/about_ubs/careers/graduate-and-intern/_jcr_content/par/dynamicteaser_440f/dynamicteaserelement_2/image.151829192.img/_34Q4224_small.jpeg" class="img-responsive" alt="HTML5 Icon" width="945" height="470"><br>
+           </div>
+           <div class="hiddenText">
+	          <a href="http://flyingtomatoairlines-cs3382.github.io">Students and Graduates</a>
+	       </div>
+            
+            <div class="image">
+               <img src="http://www.schroders.com/en/SysGlobalAssets/digital/careers/hero_experienced_hires_edited.jpg" class="img-responsive" alt="HTML5 Icon" width="945" height="470">
             </div>
+           <div class="hiddenText">
+	          <a href="http://flyingtomatoairlines-cs3382.github.io">Experienced Hire</a>
+	       </div>
+            
 		<h3>Send your CV and Cover Letter to career@flyingtomatoairlines.com if you are interested! </h3>
         </div>
       
@@ -166,8 +157,8 @@ a{
 
             <div>
                 <img src="../img/phone.png" />
-                <p>(Tel)+852 8765 4321</p>
-                <p>(Fax)+852 2134 5678</p>
+                <p>(Tel)+852 8765 4321<br />
+                (Fax)+852 2134 5678</p>
             </div>
 
             <div>
@@ -205,6 +196,18 @@ a{
         interval: 5000 //changes the speed
     })
     </script>
+    <script>
+        var acc = document.getElementsByClassName("image");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].onclick = function(){
+                this.classList.toggle("active");
+                this.nextElementSibling.classList.toggle("show");
+          }
+        }
+        </script>
+
 
 </body>
 
