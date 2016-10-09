@@ -15,6 +15,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
     <link href="css/half-slider.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
 
@@ -29,11 +30,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
   
-    <script>
-        $(document).ready(function() {
-        $("#datepicker").datepicker();
-        });
-    </script>
 
 </head>
 
@@ -148,10 +144,30 @@
                 <form>
                     <input type="checkbox" name="flightmode" value="return">Return
                     <input type="checkbox" name="flightmode" value="oneway">One way<br>
-                <label>Departure Date: </label>
-                    <input id="datepicker" /><br>
-                <label>Arrival Date: </label>
-                    <input id="datepicker" /><br>
+                <!--<label>Departure Date: </label>
+                    <input id="datepicker" /><br> -->
+                    <div class="form-group">
+                        <label for="dtp_input1" class="col-md-2 control-label">Departure Date: </label>
+                        <div class="input-group date form_date col-md-5" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input1" data-link-format="yyyy-mm-dd">
+                            <input class="form-control" size="16" type="text" value="" readonly>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                        </div>
+                        <input type="hidden" id="dtp_input1" value="" /><br/>
+                    </div>
+
+                <!--<label>Arrival Date: </label>
+                    <input id="datepicker" /><br>-->
+                    <div class="form-group">
+                        <label for="dtp_input2" class="col-md-2 control-label">Departure Date: </label>
+                        <div class="input-group date form_date col-md-5" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                            <input class="form-control" size="16" type="text" value="" readonly>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                        </div>
+                        <input type="hidden" id="dtp_input2" value="" /><br/>
+                    </div>
+
                     <label>Origin: </label>
                     <select name="country"placeholder="Country">
                         <option value="HongKong">Hong Kong</option>
@@ -292,6 +308,7 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
 
     <script src="js/main.js"></script>
     <!-- Script to Activate the Carousel -->
@@ -301,6 +318,36 @@
     })
     </script>
 
+    <script type="text/javascript">
+    $('.form_datetime').datetimepicker({
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        forceParse: 0,
+        showMeridian: 1
+    });
+    $('.form_date').datetimepicker({
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        minView: 2,
+        forceParse: 0
+    });
+    $('.form_time').datetimepicker({
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 1,
+        minView: 0,
+        maxView: 1,
+        forceParse: 0
+    });
+</script>
 </body>
 
 </html>
