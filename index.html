@@ -146,12 +146,32 @@
                 <h1>Filtering Search</h1>
                 <p>Start your fruitful journey with Flying Tomato Airlines here!</p>
                 <form>
-                <label>Departure Date: </label><input id="datepicker" /><br>
-                <label>Arrival Date: </label><input id="datepicker" /><br>
+                    <input type="checkbox" name="flightmode" value="return">Return<br>
+                    <input type="checkbox" name="flightmode" value="oneway">One way<br>
+                <label>Departure Date: </label>
+                    <input id="datepicker" /><br>
+                <label>Arrival Date: </label>
+                    <input id="datepicker" /><br>
+                    <label>Origin: </label>
+                    <select name="country"placeholder="Country">
+                        <option value="HongKong">Hong Kong</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Korea">Korea</option>
+                        <option value="Thailand">Thailand</option>
+                        <option value="Vietnam">Vietnam</option>
+                    </select>
+                    
+                    <br>
                 <label>Destination: </label>
-                <input type="text" name="destination" placeholder="Country/City"><br>
+                    <select name="country"placeholder="Country">
+                        <option value="HongKong">Hong Kong</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Korea">Korea</option>
+                        <option value="Thailand">Thailand</option>
+                        <option value="Vietnam">Vietnam</option>
+                    </select><br>
                 <label>No. of Passengers: </label>
-                <select id="no_passenger_select" name="No_of_Passengers">
+                    <select id="no_passenger_select" name="No_of_Passengers">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -162,8 +182,45 @@
                     <option value="8">8</option>
                     <option value="9">9</option>
                     <option value="10">10+</option>
-                 </select>
+                    </select>
+                    <input type="checkbox" name="directflight" value="Direct">Direct Flight Only<br>
+                    <input type="submit" value="Submit">
                 </form>
+                
+                <hr>
+                
+                <h1>University Students' Corner (Hong Kong only)</h1>
+                <form>
+                    <input type="checkbox" name="flightmode" value="return">Return<br>
+                    <input type="checkbox" name="flightmode" value="oneway">One way<br>
+                    <label>Campus</label>
+                        <select>
+                        <option value="HKU">HKU</option>
+                        <option value="CUHK">CUHK</option>
+                        <option value="HKUST">HKUST</option>
+                        <option value="CityU">CityU</option>
+                        <option value="PolyU">PolyU</option>
+                        <option value="BU">BU</option>
+                        <option value="OUHK">OUHK</option>
+                        </select>
+                    
+                    <label>No. of Passengers: </label>
+                    <select id="no_passenger_select" name="No_of_Passengers">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10+</option>
+                    </select>
+                    <input type="checkbox" name="directflight" value="Direct">Direct Flight Only<br>
+                    
+                    <input type="submit" value="Submit">
+                </form>   
             </div>
         </div>
       
