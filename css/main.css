@@ -2,10 +2,7 @@
 
 line height is 20px by default so add 30px top and bottom to equal the new .navbar-brand 80px height  */
 
-*{
-	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
-	font-size: 100%; 
-}
+
 
 .mainNav .navbar-brand {
   height: 80px;
