@@ -28,6 +28,41 @@ line height is 20px by default so add 30px top and bottom to equal the new .navb
   background-color: #f6f6f6;
 }
 
+.sectionBreak {
+	display: inline-block;
+	width: 30px;
+	height:0;
+}
+
+/* Form */
+.buttonSearch {
+	background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: 40%;
+}
+
+.buttonSearch:hover {
+    background-color: #D4372C;
+}
+
+select {
+    width: 30%;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+/* End of Form */
+
 /* Footer */
 footer {
 	margin-bottom: 0px;

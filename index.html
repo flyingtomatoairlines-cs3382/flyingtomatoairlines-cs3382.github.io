@@ -142,10 +142,15 @@
                 <h1>Filtering Search</h1>
                 <p>Start your fruitful journey with Flying Tomato Airlines here!</p>
                 <form>
-                    <input type="checkbox" name="flightmode" value="return">Return
-                    <input type="checkbox" name="flightmode" value="oneway">One way<br>
-                <!--<label>Departure Date: </label>
-                    <input id="datepicker" /><br> -->
+                    <div class="form-group">
+                        <label for="ticketType_input" class="col-md-2 control-label">Ticket Type: </label>
+                        <div class="input-group ticketType col-md-5" data-link-field="ticketType_input">
+                            <input type="radio" name="ticketType_input" value="return" checked> Return
+                            <div class="sectionBreak"></div>
+                            <input type="radio" name="ticketType_input" value="oneWay"> One way
+                        </div>
+                        <br>
+                    </div>
                     <div class="form-group">
                         <label for="dtp_input1" class="col-md-2 control-label">Departure Date: </label>
                         <div class="input-group date form_date col-md-5" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input1" data-link-format="yyyy-mm-dd">
@@ -156,8 +161,6 @@
                         <input type="hidden" id="dtp_input1" value="" /><br/>
                     </div>
 
-                <!--<label>Arrival Date: </label>
-                    <input id="datepicker" /><br>-->
                     <div class="form-group">
                         <label for="dtp_input2" class="col-md-2 control-label">Departure Date: </label>
                         <div class="input-group date form_date col-md-5" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
@@ -168,74 +171,99 @@
                         <input type="hidden" id="dtp_input2" value="" /><br/>
                     </div>
 
-                    <label>Origin: </label>
-                    <select name="country"placeholder="Country">
-                        <option value="HongKong">Hong Kong</option>
-                        <option value="Japan">Japan</option>
-                        <option value="Korea">Korea</option>
-                        <option value="Thailand">Thailand</option>
-                        <option value="Vietnam">Vietnam</option>
-                    </select>
-                    
+                    <div class="form-group">
+                        <label for="loc_input1" class="col-md-2 control-label">Origin: </label>
+                        <select name="country"placeholder="Country">
+                            <option value="HongKong">Hong Kong</option>
+                            <option value="Japan">Japan</option>
+                            <option value="Korea">Korea</option>
+                            <option value="Thailand">Thailand</option>
+                            <option value="Vietnam">Vietnam</option>
+                        </select>
+                    </div>
                     <br>
-                <label>Destination: </label>
-                    <select name="country"placeholder="Country">
-                        <option value="HongKong">Hong Kong</option>
-                        <option value="Japan">Japan</option>
-                        <option value="Korea">Korea</option>
-                        <option value="Thailand">Thailand</option>
-                        <option value="Vietnam">Vietnam</option>
-                    </select><br>
-                <label>No. of Passengers: </label>
-                    <select id="no_passenger_select" name="No_of_Passengers">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10+</option>
-                    </select><br>
-                    <input type="checkbox" name="directflight" value="Direct">Direct Flight Only<br>
-                    <input type="submit" value="Submit">
+                    <div class="form-group">
+                        <label for="loc_input2" class="col-md-2 control-label">Destination: </label>
+                        <select name="country"placeholder="Country">
+                            <option value="HongKong">Hong Kong</option>
+                            <option value="Japan">Japan</option>
+                            <option value="Korea">Korea</option>
+                            <option value="Thailand">Thailand</option>
+                            <option value="Vietnam">Vietnam</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="no_input" class="col-md-2 control-label">No. of Passengers: </label>
+                        <select id="no_passenger_select" name="No_of_Passengers">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10+</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="no_input" class="col-md-2 control-label">Direct Flight Only?</label>
+                        <input type="checkbox" name="directflight" value="Direct">
+                    </div>
+                    <input type="submit" value="Search" class="buttonSearch">
                 </form>
                 
                 <hr>
                 
                 <h1>University Students' Corner (Hong Kong only)</h1>
                 <form>
-                    <input type="checkbox" name="flightmode" value="return">Return
-                    <input type="checkbox" name="flightmode" value="oneway">One way<br>
-                    <label>Campus</label>
+                    <div class="form-group">
+                        <label for="ticketType_input_u" class="col-md-2 control-label">Ticket Type: </label>
+                        <div class="input-group ticketType col-md-5" data-link-field="ticketType_input">
+                            <input type="radio" name="ticketType_input" value="return" checked> Return
+                            <div class="sectionBreak"></div>
+                            <input type="radio" name="ticketType_input" value="oneWay"> One way
+                        </div>
+                        <br>
+                    </div>
+                    <div class="form-group">
+                        <label for="campus_input" class="col-md-2 control-label">Campus</label>
                         <select>
-                        <option value="HKU">HKU</option>
-                        <option value="CUHK">CUHK</option>
-                        <option value="HKUST">HKUST</option>
-                        <option value="CityU">CityU</option>
-                        <option value="PolyU">PolyU</option>
-                        <option value="BU">BU</option>
-                        <option value="OUHK">OUHK</option>
+                            <option value="HKU">HKU</option>
+                            <option value="CUHK">CUHK</option>
+                            <option value="HKUST">HKUST</option>
+                            <option value="CityU">CityU</option>
+                            <option value="PolyU">PolyU</option>
+                            <option value="BU">BU</option>
+                            <option value="OUHK">OUHK</option>
                         </select><br>
+                    </div>
                     
-                    <label>No. of Passengers: </label>
-                    <select id="no_passenger_select" name="No_of_Passengers">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10+</option>
-                    </select><br>
-                    <input type="checkbox" name="directflight" value="Direct">Direct Flight Only<br>
+                    <div class="form-group">
+                        <label for="no_input_u" class="col-md-2 control-label">No. of Passengers: </label>
+                        <select id="no_passenger_select_u" name="No_of_Passengers">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10+</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="no_input" class="col-md-2 control-label">Direct Flight Only?</label>
+                        <input type="checkbox" name="directflight" value="Direct">
+                    </div>
                     
-                    <input type="submit" value="Submit">
+                    <input type="submit" value="Search" class="buttonSearch">
                 </form>   
             </div>
         </div>
