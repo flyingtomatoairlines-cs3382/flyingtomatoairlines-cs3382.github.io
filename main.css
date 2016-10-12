@@ -1,52 +1,6 @@
-/*Color Scheme*/
-*{
-	font-family: 'Aktiv Grotesk W01 Regular',sans-serif;
-	
-}
-
-.mainNav #top{
-	color: #FF0066;
-}
-
-/*body {
-    font-size: 100%;
-}*/
-
-.container-fluid h1, #Tomato{
-	font-size: 4em;
-	line-height: 90%;
-}
-
-
-h2 {
-    font-size: 2.875em;
-}
-
-h3 {
-    font-size: 2.5em;
-}
-
-p, label, a, input[type="radio"] {
-    font-size: 1.2em;
-}
-
-
-
-.container-fluid span{
-	color: #DC143C;
-}
-
-
-#collapse navbar-collapse{
-	background-color: yellow;
-}
-
-
-
 /* EXAMPLE 3
 
 line height is 20px by default so add 30px top and bottom to equal the new .navbar-brand 80px height  */
-
 
 
 .mainNav .navbar-brand {
@@ -78,7 +32,7 @@ line height is 20px by default so add 30px top and bottom to equal the new .navb
 
 /* Form */
 .buttonSearch {
-	background-color: #DC143C;
+	background-color: #00804f;
     border: none;
     color: white;
     padding: 16px 32px;
@@ -94,7 +48,7 @@ line height is 20px by default so add 30px top and bottom to equal the new .navb
 }
 
 .buttonSearch:hover {
-    background-color: #2E8B57;
+    background-color: #133924;
 }
 
 select {
@@ -271,5 +225,95 @@ footer {
 		margin-left: 0;
 	}
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*Color Scheme*/
+*{
+	font-family: 'Aktiv Grotesk W01 Regular',sans-serif;
+}
+
+#nav{
+	background-color: #2E8B57;
+}
+
+/*body {
+    font-size: 100%;
+}*/
+
+.container-fluid h1, #Tomato{
+	font-size: 4em;
+	line-height: 90%;
+}
+
+h2 {
+    font-size: 2.875em;
+}
+
+h3 {
+    font-size: 2.3em;
+}
+
+p, label, a, input[type="radio"] {
+    font-size: 1.2em;
+}
+
+.container-fluid span{
+	color: #DC143C;
+}
+
+input[type=checkbox]{
+	
+    transform:scale(1.45, 1.45);
+	width: 50px;
+}
+
+input[type='radio'] {
+	transform: scale(1.5);
+	}
+
+
+
+/*Disable text selection*/
+*{
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+#navright{
+  color: white;
+}
+
+#navright:hover{
+  background-color: white;
+  color: #2E8B57;
+}
+
+.footer-distributed .footer-left span{
+  color:#DC143C;
+  font-family: 'Aktiv Grotesk W01 Regular',sans-serif;
+}
+.footer-distributed .footer-left h4{
+  font-family: 'Aktiv Grotesk W01 Regular',sans-serif;
+}
+
+#email{
+  color: #2E8B57;
+  font-size: 1.05em;
 }
 
