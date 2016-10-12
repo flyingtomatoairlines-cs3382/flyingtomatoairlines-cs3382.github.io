@@ -1,11 +1,53 @@
+/*Color Scheme*/
+*{
+	font-family: 'Aktiv Grotesk W01 Regular',sans-serif;
+	
+}
+
+.mainNav #top{
+	color: #FF0066;
+}
+
+/*body {
+    font-size: 100%;
+}*/
+
+.container-fluid h1, #Tomato{
+	font-size: 4em;
+	line-height: 90%;
+}
+
+
+h2 {
+    font-size: 2.875em;
+}
+
+h3 {
+    font-size: 2.5em;
+}
+
+p, label, a, input[type="radio"] {
+    font-size: 1.2em;
+}
+
+
+
+.container-fluid span{
+	color: #DC143C;
+}
+
+
+#collapse navbar-collapse{
+	background-color: yellow;
+}
+
+
+
 /* EXAMPLE 3
 
 line height is 20px by default so add 30px top and bottom to equal the new .navbar-brand 80px height  */
 
-*{
-	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-	
-}
+
 
 .mainNav .navbar-brand {
   height: 80px;
@@ -36,7 +78,7 @@ line height is 20px by default so add 30px top and bottom to equal the new .navb
 
 /* Form */
 .buttonSearch {
-	background-color: #f44336;
+	background-color: #DC143C;
     border: none;
     color: white;
     padding: 16px 32px;
@@ -45,14 +87,14 @@ line height is 20px by default so add 30px top and bottom to equal the new .navb
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
-    -webkit-transition-duration: 0.4s; /* Safari */
+    -webkit-transition-duration: 0.01s; /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
     width: 40%;
 }
 
 .buttonSearch:hover {
-    background-color: #D4372C;
+    background-color: #2E8B57;
 }
 
 select {
