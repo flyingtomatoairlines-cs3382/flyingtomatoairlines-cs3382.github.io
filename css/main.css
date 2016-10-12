@@ -241,11 +241,10 @@ footer {
 /*Color Scheme*/
 *{
 	font-family: 'Aktiv Grotesk W01 Regular',sans-serif;
-	
 }
 
-.mainNav #top{
-	color: #FF0066;
+#nav{
+	background-color: #2E8B57;
 }
 
 /*body {
@@ -256,7 +255,6 @@ footer {
 	font-size: 4em;
 	line-height: 90%;
 }
-
 
 h2 {
     font-size: 2.875em;
@@ -284,9 +282,7 @@ input[type='radio'] {
 	transform: scale(1.5);
 	}
 
-#nav{
-	background-color: #2E8B57;
-}
+
 
 /*Disable text selection*/
 *{
@@ -308,6 +304,15 @@ input[type='radio'] {
   color: #2E8B57;
 }
 
-.dropdown-menu{
-  color: yellow;
+.footer-distributed .footer-left span{
+  color:#DC143C;
+  font-family: 'Aktiv Grotesk W01 Regular',sans-serif;
+}
+.footer-distributed .footer-left h4{
+  font-family: 'Aktiv Grotesk W01 Regular',sans-serif;
+}
+
+#email{
+  color: #2E8B57;
+  font-size: 1.05em;
 }
