@@ -16,10 +16,6 @@ line height is 20px by default so add 30px top and bottom to equal the new .navb
   margin: 25px 15px 25px 0;
 }
 
-.mainNav:hover{
-	background-color: #004d4d;
-}
-
 .container-fluid {
   padding: 60px 50px;
 }
@@ -37,7 +33,6 @@ line height is 20px by default so add 30px top and bottom to equal the new .navb
 /* Form */
 .buttonSearch {
 	background-color: #006666;
-	background-position:center;
     border: none;
     color: white;
     padding: 16px 32px;
@@ -281,11 +276,15 @@ p, label, a, input[type="radio"] {
 
 input[type=checkbox]{
 	
-    transform:scale(1.8, 1.8);
+    transform:scale(1.45, 1.45);
 	width: 50px;
 }
 
 input[type='radio'] {
-	transform: scale(1.75);
+	transform: scale(1.5);
 	}
 
+#nav{
+	background-color: #2E8B57;
+	width: auto;
+}
