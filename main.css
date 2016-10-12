@@ -36,9 +36,11 @@ p, label, a, input[type="radio"] {
 	color: #DC143C;
 }
 
-.buttonSearch{
-	background-color: #DC143C;
+
+#collapse navbar-collapse{
+	background-color: yellow;
 }
+
 
 
 /* EXAMPLE 3
@@ -76,7 +78,7 @@ line height is 20px by default so add 30px top and bottom to equal the new .navb
 
 /* Form */
 .buttonSearch {
-	background-color: #f44336;
+	background-color: #DC143C;
     border: none;
     color: white;
     padding: 16px 32px;
@@ -85,14 +87,14 @@ line height is 20px by default so add 30px top and bottom to equal the new .navb
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
-    -webkit-transition-duration: 0.4s; /* Safari */
+    -webkit-transition-duration: 0.01s; /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
     width: 40%;
 }
 
 .buttonSearch:hover {
-    background-color: #D4372C;
+    background-color: #2E8B57;
 }
 
 select {
