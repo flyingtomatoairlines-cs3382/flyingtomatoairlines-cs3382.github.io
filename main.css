@@ -1,0 +1,273 @@
+/*Color Scheme*/
+*{
+	font-family: 'Aktiv Grotesk W01 Regular',sans-serif;
+	
+}
+
+.mainNav #top{
+	color: #FF0066;
+}
+
+/*body {
+    font-size: 100%;
+}*/
+
+.container-fluid h1, #Tomato{
+	font-size: 4em;
+	line-height: 90%;
+}
+
+
+h2 {
+    font-size: 2.875em;
+}
+
+h3 {
+    font-size: 2.5em;
+}
+
+p, label, a, input[type="radio"] {
+    font-size: 1.2em;
+}
+
+
+
+.container-fluid span{
+	color: #DC143C;
+}
+
+.buttonSearch{
+	background-color: #DC143C;
+}
+
+
+/* EXAMPLE 3
+
+line height is 20px by default so add 30px top and bottom to equal the new .navbar-brand 80px height  */
+
+
+
+.mainNav .navbar-brand {
+  height: 80px;
+}
+
+.mainNav .nav >li >a {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.mainNav .navbar-toggle {
+  padding: 10px;
+  margin: 25px 15px 25px 0;
+}
+
+.container-fluid {
+  padding: 60px 50px;
+}
+
+.bg-grey {
+  background-color: #f6f6f6;
+}
+
+.sectionBreak {
+	display: inline-block;
+	width: 30px;
+	height:0;
+}
+
+/* Form */
+.buttonSearch {
+	background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: 40%;
+}
+
+.buttonSearch:hover {
+    background-color: #D4372C;
+}
+
+select {
+    width: 30%;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+/* End of Form */
+
+/* Footer */
+footer {
+	margin-bottom: 0px;
+}
+
+.footer-distributed{
+	background-color: #292c2f;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+
+	padding: 55px 50px;
+	margin-top: 80px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h4{
+	color:  #ffffff;
+	font: normal 30px 'Cookie', cursive;
+	margin: 0;
+}
+
+.footer-distributed h4 span{
+	color:  #ff0000;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center img{
+	background-color:  #33383b;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 45px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #5383d3;
+	text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-text{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-text span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+
