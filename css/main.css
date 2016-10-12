@@ -32,7 +32,7 @@ line height is 20px by default so add 30px top and bottom to equal the new .navb
 
 /* Form */
 .buttonSearch {
-	background-color: #006666;
+	background-color: #00804f;
     border: none;
     color: white;
     padding: 16px 32px;
@@ -48,7 +48,7 @@ line height is 20px by default so add 30px top and bottom to equal the new .navb
 }
 
 .buttonSearch:hover {
-    background-color: #004d4d;
+    background-color: #133924;
 }
 
 select {
@@ -263,7 +263,7 @@ h2 {
 }
 
 h3 {
-    font-size: 2.5em;
+    font-size: 2.3em;
 }
 
 p, label, a, input[type="radio"] {
@@ -286,5 +286,28 @@ input[type='radio'] {
 
 #nav{
 	background-color: #2E8B57;
-	width: auto;
+}
+
+/*Disable text selection*/
+*{
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+#navright{
+  color: white;
+}
+
+#navright:hover{
+  background-color: white;
+  color: #2E8B57;
+}
+
+.dropdown-menu{
+  color: yellow;
 }
