@@ -33,6 +33,7 @@ line height is 20px by default so add 30px top and bottom to equal the new .navb
 /* Form */
 .buttonSearch {
 	background-color: #00804f;
+	background-position: centre;
     border: none;
     color: white;
     padding: 16px 32px;
