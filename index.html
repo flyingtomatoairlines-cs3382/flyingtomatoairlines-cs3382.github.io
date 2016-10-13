@@ -27,8 +27,70 @@
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-  
-    <link rel="icon" type="image/png" href="img/favicon.x-icon">
+    
+    <style>
+        /* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+    </style>
+    
+    <script>
+        // When the user clicks on <div>, open the popup
+function subscribe() {
+    var popup = document.getElementById('myPopup');
+    popup.classList.toggle('show');
+}
+    </script>
 </head>
 
 <body>
@@ -298,7 +360,8 @@
             <div class="subscribe">
                 <form>
                     <input type="text" name="subscribe" placeholder="Email address here">
-                    <input type="submit" value="Subscribe!">
+                    <input type="submit" value="Subscribe!" onclick="subscribe()">
+                    <span class="popuptext" id="myPopup">Subscribed successfully!</span>
                 </form>
             </div><br>
             
