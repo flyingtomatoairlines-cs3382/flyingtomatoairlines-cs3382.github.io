@@ -283,11 +283,11 @@ input[type='radio'] {
                                   not supported by any browser */
 }
 
-.navright{
+#navright #navright1 #navright2{
   color: white;
 }
 
-.navright:hover{
+#navright #navright1 #navright2:hover{
   background-color: white;
   color: #2E8B57;
 }
