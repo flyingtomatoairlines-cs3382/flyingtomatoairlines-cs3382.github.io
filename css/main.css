@@ -58,6 +58,19 @@ select {
 }
 
 /* End of Form */
+.guides {
+	font-size:2.3em;
+}
+
+.guideBreak {
+	display: inline-block;
+	width: 50px;
+	height: 5px;
+}
+/* Guide */
+
+
+/* End of Guide */
 
 /* Footer */
 footer {
@@ -85,9 +98,7 @@ footer {
 
 /* Footer left */
 
-.footer-distributed .footer-left .subscribe{
-	width: 40%;
-}
+
 
 /* The company logo */
 
@@ -121,6 +132,22 @@ footer {
 	font-size: 14px;
 	font-weight: normal;
 	margin: 0;
+}
+
+.buttonSub {
+	background-color: #00804f;
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.01s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: 100%;
 }
 
 /* Footer Center */
