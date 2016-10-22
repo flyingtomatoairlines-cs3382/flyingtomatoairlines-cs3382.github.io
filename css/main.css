@@ -30,6 +30,10 @@ line height is 20px by default so add 30px top and bottom to equal the new .navb
 	height:0;
 }
 
+.carousel-inner {
+	margin-top: 80px;
+}
+
 /* Form */
 .buttonSearch {
 	background-color: #00804f;
