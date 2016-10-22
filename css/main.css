@@ -69,6 +69,20 @@ select {
 }
 /* Guide */
 
+.container>.row {
+	padding: 0 100px;
+}
+
+.content-section-a {
+    padding: 50px 0;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.content-section-b {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
 
 /* End of Guide */
 
@@ -297,7 +311,9 @@ input[type='radio'] {
 	transform: scale(1.5);
 	}
 
-
+.navbar-inverse .navbar-toggle {
+	border-color: white;
+}
 
 /*Disable text selection*/
 *{
