@@ -28,12 +28,16 @@ i<!DOCTYPE html>
     <style>
 	    <link rel="shortcut icon" type="image/x-icon" href="http://pasteboard.co/e0m0FAcZZ.x-icon">
 
-    .image{
-	   display:block;
-	   margin-left: auto;
-  	   margin-right: auto;
-
-    }
+    .image .text-content{
+	    position:relative;
+		bottom:30px;
+		left:0px;
+		visibility:hidden;
+		}
+	    
+	    .image:hover .text-content {
+visibility:visible;
+}
 	    
     .hiddenText{
 	display:none;
@@ -119,7 +123,8 @@ i<!DOCTYPE html>
         <div class="container-fluid bg-grey">
             <div class="image">
                <img src="https://www.ubs.com/global/en/about_ubs/careers/graduate-and-intern/_jcr_content/par/dynamicteaser_440f/dynamicteaserelement_2/image.151829192.img/_34Q4224_small.jpeg" class="img-responsive" alt="HTML5 Icon" width="945" height="470"><br>
-           </div>
+		    <p class="text-content"><span>Students and Graduates</p>
+		</div>
            <div class="hiddenText">
 	          <a href="http://flyingtomatoairlines-cs3382.github.io">Students and Graduates</a>
 	       </div>
