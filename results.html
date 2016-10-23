@@ -84,17 +84,27 @@
     to {opacity:1 ;}
 }
 
-    </style>
-    
-    <script>
-        // When the user clicks on <div>, open the popup
-function subscribe() {
-    var popup = document.getElementById('myPopup');
-    popup.classList.toggle('show');
+.hiddenSection{
+    display:none;
+    padding: 30px 18px;
 }
-    </script>
 
-    <link rel="icon" type="image/png" href="img/favicon.x-icon">
+.hiddenSection .show {
+    opacity: 1;
+    max-height: 500px;  
+} 
+</style>
+    
+<script>
+    // When the user clicks on <div>, open the popup
+    function subscribe() {
+        var popup = document.getElementById('myPopup');
+        popup.classList.toggle('show');
+    }
+</script>
+
+<link rel="icon" type="image/png" href="img/favicon.x-icon">
+
 </head>
 
 <body>
@@ -153,9 +163,9 @@ function subscribe() {
     <div class="container">
 
         
-        <button type="button" class="btn btn-default btn-lg btn-block expand">Re-define Flight</button>
+        <button type="button" class="btn btn-default btn-lg btn-block expandButton">Re-define Flight</button>
 
-        <div class="container-fluid bg-grey hide">
+        <div class="container-fluid bg-grey hiddenSection">
             <div class="col-lg-12">
                 <h3>SEARCH</h3>
                 <p>Start your fruitful journey with Flying Tomato Airlines here!</p>
@@ -286,7 +296,198 @@ function subscribe() {
                 </form>   
             </div>
         </div>
+        <div class="sectionBreak"></div>
+        <div class="row">
+            <div class="col-md-7">
+                <h4>From <b>1 Nov 2016</b> To <b>10 Nov 2016</b></h4>
+                <div class="col-md-4 col-xs-3 col-header">
+                    <p>Airport:</p>
+                    <p>Flight No.:</p>
+                    <p>Time:</p>
+                </div>
+                <div class="col-md-8 col-xs-7">
+                <table class="table">
+                    <tbody>
+                      <tr>
+                        <td>HKG -> KIX</td>
+                        <td>KIX -> HKG</td>
+                      </tr>
+                      <tr>
+                        <td>FT0100</td>
+                        <td>FT3100</td>
+                      </tr>
+                      <tr>
+                        <td>9:20 PM - 2:10 AM</td>
+                        <td>4:10 PM - 7:45 PM</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+                <a class="btn btn-primary" href="#">Select this Flight <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
 
+        <hr>
+
+        <div class="row">
+            <div class="col-md-7">
+                <h4>From <b>1 Nov 2016</b> To <b>10 Nov 2016</b></h4>
+                <div class="col-md-4 col-xs-3 col-header">
+                    <p>Airport:</p>
+                    <p>Flight No.:</p>
+                    <p>Time:</p>
+                </div>
+                <div class="col-md-8 col-xs-7">
+                <table class="table">
+                    <tbody>
+                      <tr>
+                        <td>HKG -> KIX</td>
+                        <td>KIX -> HKG</td>
+                      </tr>
+                      <tr>
+                        <td>FT0100</td>
+                        <td>FT3100</td>
+                      </tr>
+                      <tr>
+                        <td>9:20 PM - 2:10 AM</td>
+                        <td>4:10 PM - 7:45 PM</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+                <a class="btn btn-primary" href="#">Select this Flight <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-md-7">
+                <h4>From <b>1 Nov 2016</b> To <b>10 Nov 2016</b></h4>
+                <div class="col-md-4 col-xs-3 col-header">
+                    <p>Airport:</p>
+                    <p>Flight No.:</p>
+                    <p>Time:</p>
+                </div>
+                <div class="col-md-8 col-xs-7">
+                <table class="table">
+                    <tbody>
+                      <tr>
+                        <td>HKG -> KIX</td>
+                        <td>KIX -> HKG</td>
+                      </tr>
+                      <tr>
+                        <td>FT0100</td>
+                        <td>FT3100</td>
+                      </tr>
+                      <tr>
+                        <td>9:20 PM - 2:10 AM</td>
+                        <td>4:10 PM - 7:45 PM</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+                <a class="btn btn-primary" href="#">Select this Flight <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-md-7">
+                <h4>From <b>1 Nov 2016</b> To <b>10 Nov 2016</b></h4>
+                <div class="col-md-4 col-xs-3 col-header">
+                    <p>Airport:</p>
+                    <p>Flight No.:</p>
+                    <p>Time:</p>
+                </div>
+                <div class="col-md-8 col-xs-7">
+                <table class="table">
+                    <tbody>
+                      <tr>
+                        <td>HKG -> KIX</td>
+                        <td>KIX -> HKG</td>
+                      </tr>
+                      <tr>
+                        <td>FT0100</td>
+                        <td>FT3100</td>
+                      </tr>
+                      <tr>
+                        <td>9:20 PM - 2:10 AM</td>
+                        <td>4:10 PM - 7:45 PM</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+                <a class="btn btn-primary" href="#">Select this Flight <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-md-7">
+                <h4>From <b>1 Nov 2016</b> To <b>10 Nov 2016</b></h4>
+                <div class="col-md-4 col-xs-3 col-header">
+                    <p>Airport:</p>
+                    <p>Flight No.:</p>
+                    <p>Time:</p>
+                </div>
+                <div class="col-md-8 col-xs-7">
+                <table class="table">
+                    <tbody>
+                      <tr>
+                        <td>HKG -> KIX</td>
+                        <td>KIX -> HKG</td>
+                      </tr>
+                      <tr>
+                        <td>FT0100</td>
+                        <td>FT3100</td>
+                      </tr>
+                      <tr>
+                        <td>9:20 PM - 2:10 AM</td>
+                        <td>4:10 PM - 7:45 PM</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+                <a class="btn btn-primary" href="#">Select this Flight <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Pagination -->
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <ul class="pagination">
+                    <li>
+                        <a href="#">&laquo;</a>
+                    </li>
+                    <li class="active">
+                        <a href="#">1</a>
+                    </li>
+                    <li>
+                        <a href="#">2</a>
+                    </li>
+                    <li>
+                        <a href="#">3</a>
+                    </li>
+                    <li>
+                        <a href="#">4</a>
+                    </li>
+                    <li>
+                        <a href="#">5</a>
+                    </li>
+                    <li>
+                        <a href="#">&raquo;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.row -->
+
+<hr>
 
      
 
@@ -398,23 +599,17 @@ function subscribe() {
         forceParse: 0
     });
 </script>
+
 <script>
-    $(".expand").click(function () {
+    var acc = document.getElementsByClassName("expandButton");
+    var i;
 
-    $header = $(this);
-    //getting the next element
-    $content = $header.next();
-    //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
-    $content.slideToggle(500, function () {
-        //execute this after slideToggle is done
-        //change text of header based on visibility of content div
-        $header.text(function () {
-            //change text based on condition
-            return $content.is(":visible") ? "Collapse" : "Expand";
-        });
-    });
-
-});
+    for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function(){
+            this.classList.toggle("active");
+            this.nextElementSibling.classList.toggle("show");
+      }
+    }
 </script>
 
 </body>
