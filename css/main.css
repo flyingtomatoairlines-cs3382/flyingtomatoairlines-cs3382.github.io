@@ -34,6 +34,12 @@ line height is 20px by default so add 30px top and bottom to equal the new .navb
 	margin-top: 80px;
 }
 
+.bannerBreak {
+	display: inline-block;
+	width: 5px;
+	height: 80px;
+}
+
 /* Form */
 .buttonSearch {
 	background-color: #00804f;

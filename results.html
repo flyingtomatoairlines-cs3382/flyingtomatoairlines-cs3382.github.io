@@ -17,6 +17,7 @@
     <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
     <link href="css/half-slider.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+    <link href="css/results.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -146,57 +147,15 @@ function subscribe() {
             <!-- /.container -->
         </nav>
     </div>
-    <!-- Half Page Image Background Carousel Header -->
-    <header id="myCarousel" class="carousel slide">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-            <li data-target="#myCarousel" data-slide-to="3"></li>
-        </ol>
-
-        <!-- Wrapper for Slides -->
-        <div class="carousel-inner">
-            <div class="item active">
-                <!-- Set the first background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('http://flyingtomatoairlines-cs3382.github.io/img/banner1.jpg');"></div>
-            </div>
-            <div class="item">
-                <!-- Set the second background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('flyingtomatoairlines-cs3382.github.io/img/banner2.jpg');"></div>
-            </div>
-            <div class="item">
-                <!-- Set the third background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('http://flyingtomatoairlines-cs3382.github.io/img/banner3.jpg');"></div>
-            </div>
-            <div class="item">
-                <!-- Set the third background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('http://flyingtomatoairlines-cs3382.github.io/img/banner4.jpg');"></div>
-            </div>
-        </div>
-
-        <!-- Controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="icon-prev"></span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="icon-next"></span>
-        </a>
-
-    </header>
+    <div class="bannerBreak"></div>
 
     <!-- Page Content -->
     <div class="container">
 
-        <div class="container-fluid">
-            <div class="col-lg-12">
-                <img src="img/flyingtomato.png" width=95% alt= "Flying Tomoto Airlines">
-                <p>A LCC(Low Cost Carrier) caters for price sensitive travellers and university students who wish to take a rest in Asia.</p>
-            </div>
-        </div>
+        
+        <button type="button" class="btn btn-default btn-lg btn-block expand">Re-define Flight</button>
 
-        <div class="container-fluid bg-grey">
+        <div class="container-fluid bg-grey hide">
             <div class="col-lg-12">
                 <h3>SEARCH</h3>
                 <p>Start your fruitful journey with Flying Tomato Airlines here!</p>
@@ -328,80 +287,10 @@ function subscribe() {
             </div>
         </div>
 
-        <div class="content-section-a">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-5 col-sm-6">
-                        <div class="clearfix"></div>
-                        <h2 class="section-heading">Search</h2>
-                        <p class="lead">You can find different flights by answering simple questions.</p>
-                    </div>
-                    <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                        <img class="img-responsive" src="img/search.png" alt="search icon" width="150" height="150"/>
-                    </div>
-                </div>
 
-            </div>
-            <!-- /.container -->
-        </div>
-        <!-- /.content-section-a -->
+     
 
-        <div class="content-section-b">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                        <div class="clearfix"></div>
-                        <h2 class="section-heading">List of Results</h2>
-                        <p class="lead">A list of flights will be displayed for you to find the most suitable flight.</p>
-                    </div>
-                    <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                        <img src="img/search_result.png" class="img-responsive" alt="search results icon" width="150" height="150"/>
-                    </div>
-                </div>
-
-            </div>
-            <!-- /.container -->
-        </div>
-        <!-- /.content-section-b -->
-
-        <div class="content-section-a">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-5 col-sm-6">
-                        <div class="clearfix"></div>
-                        <h2 class="section-heading">Personal Information</h2>
-                        <p class="lead">By filling in your personal information, the booking will soon be confirmed.</p>
-                    </div>
-                    <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                        <img src="img/fill_form.png" class="img-responsive" alt="fill in imformation icon" width="150" height="150"/>
-                    </div>
-                </div>
-
-            </div>
-            <!-- /.container -->
-        </div>
-        <!-- /.content-section-a -->
-
-        <div class="content-section-b">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                        <div class="clearfix"></div>
-                        <h2 class="section-heading">Payment</h2>
-                        <p class="lead">Money needed to transfered to the bank account in order to complete the booking.</p>
-                    </div>
-                    <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                        <img src="img/payment.png" class="img-responsive" alt="payment icon" width="150" height="150"/>
-                    </div>
-                </div>
-            </div>
-            <!-- /.container -->
-        </div>
-        <!-- /.content-section-b -->
     </div> 
-
-
-
 
     <!-- Footer -->
     <footer class="footer-distributed">
@@ -509,6 +398,25 @@ function subscribe() {
         forceParse: 0
     });
 </script>
+<script>
+    $(".expand").click(function () {
+
+    $header = $(this);
+    //getting the next element
+    $content = $header.next();
+    //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+    $content.slideToggle(500, function () {
+        //execute this after slideToggle is done
+        //change text of header based on visibility of content div
+        $header.text(function () {
+            //change text based on condition
+            return $content.is(":visible") ? "Collapse" : "Expand";
+        });
+    });
+
+});
+</script>
+
 </body>
 
 </html>
