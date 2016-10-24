@@ -42,7 +42,7 @@ line height is 20px by default so add 30px top and bottom to equal the new .navb
 
 /* Form */
 .buttonSearch {
-	background-color: #006666;
+	background-color: #004466;
     border: none;
     color: white;
     padding: 16px 32px;
@@ -159,7 +159,7 @@ footer {
 }
 
 .buttonSub {
-	background-color: #006666;
+	background-color: #004466;
     border: none;
     color: white;
     padding: 5px 20px;
