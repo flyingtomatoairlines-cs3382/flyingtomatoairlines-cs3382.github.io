@@ -30,9 +30,19 @@ line height is 20px by default so add 30px top and bottom to equal the new .navb
 	height:0;
 }
 
+.carousel-inner {
+	margin-top: 80px;
+}
+
+.bannerBreak {
+	display: inline-block;
+	width: 5px;
+	height: 80px;
+}
+
 /* Form */
 .buttonSearch {
-	background-color: #00804f;
+	background-color: #006666;
     border: none;
     color: white;
     padding: 16px 32px;
@@ -48,7 +58,7 @@ line height is 20px by default so add 30px top and bottom to equal the new .navb
 }
 
 .buttonSearch:hover {
-    background-color: #133924;
+    background-color: #000033;
 }
 
 select {
@@ -58,6 +68,33 @@ select {
 }
 
 /* End of Form */
+.guides {
+	font-size:2.3em;
+}
+
+.guideBreak {
+	display: inline-block;
+	width: 50px;
+	height: 5px;
+}
+/* Guide */
+
+.container>.row {
+	padding: 0 100px;
+}
+
+.content-section-a {
+    padding: 50px 0;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.content-section-b {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+/* End of Guide */
 
 /* Footer */
 footer {
@@ -85,9 +122,7 @@ footer {
 
 /* Footer left */
 
-.footer-distributed .footer-left{
-	width: 40%;
-}
+
 
 /* The company logo */
 
@@ -121,6 +156,22 @@ footer {
 	font-size: 14px;
 	font-weight: normal;
 	margin: 0;
+}
+
+.buttonSub {
+	background-color: #006666;
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.01s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: 100%;
 }
 
 /* Footer Center */
@@ -244,17 +295,9 @@ footer {
 }
 
 #nav{
-	background-color: #2E8B57;
+	background-color: #00004d;
 }
 
-/*body {
-    font-size: 100%;
-}*/
-
-.container-fluid h1, #Tomato{
-	font-size: 4em;
-	line-height: 90%;
-}
 
 h2 {
     font-size: 2.875em;
@@ -268,10 +311,6 @@ p, label, a, input[type="radio"] {
     font-size: 1.2em;
 }
 
-.container-fluid span{
-	color: #DC143C;
-}
-
 input[type=checkbox]{
 	
     transform:scale(1.45, 1.45);
@@ -282,7 +321,9 @@ input[type='radio'] {
 	transform: scale(1.5);
 	}
 
-
+.navbar-inverse .navbar-toggle {
+	border-color: white;
+}
 
 /*Disable text selection*/
 *{
@@ -295,11 +336,11 @@ input[type='radio'] {
                                   not supported by any browser */
 }
 
-#navright{
+#navright #navright1 #navright2{
   color: white;
 }
 
-#navright:hover{
+#navright #navright1 #navright2:hover{
   background-color: white;
   color: #2E8B57;
 }
@@ -316,4 +357,3 @@ input[type='radio'] {
   color: #2E8B57;
   font-size: 1.05em;
 }
-
