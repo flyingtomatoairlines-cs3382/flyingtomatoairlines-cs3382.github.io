@@ -32,3 +32,9 @@ $(document).ready(function(){
     });
   });
 })
+
+// When the user clicks on <div>, open the popup
+function subscribe() {
+  var popup = document.getElementById('myPopup');
+  popup.classList.toggle('show');
+}
