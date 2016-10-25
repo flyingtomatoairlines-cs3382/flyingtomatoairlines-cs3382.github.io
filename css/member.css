@@ -109,3 +109,9 @@ input[type="password"]:focus {
     cursor: pointer;
     width: 40%;
 }
+
+.reg-success {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 1.5em;
+}
