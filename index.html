@@ -31,6 +31,18 @@
     
 
     <link rel="icon" type="image/png" href="img/favicon.x-icon">
+    
+    <style>
+        body, body.normal {
+    font-size: 16px;
+}
+body.big {
+    font-size: 36px;
+}
+body.small {
+    font-size: 12px;
+}
+    </style>
 </head>
 
 <body>
@@ -49,6 +61,21 @@
                     </button>
                     <a class="navbar-brand" href="/"><img src="http://flyingtomatoairlines-cs3382.github.io/img/logo2-min.jpg" alt="logo image" style="height:50px; width:50px;"/></a>
                 </div>
+                
+                <button class="js-font" data-size="big">Bigger</button>
+                <button class="js-font" data-size="normal">Normal</button>
+                <button class="js-font" data-size="small">Smaller</button>
+                <script>
+                    $(function() {
+
+    $('.js-font').on('click', function() {
+        $('body')
+            .attr('class', '')
+            .addClass($(this).data('size'));
+    });
+
+});
+                </script>
                 <!-- Collect the nav links, forms, and other content for toggling -->
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
