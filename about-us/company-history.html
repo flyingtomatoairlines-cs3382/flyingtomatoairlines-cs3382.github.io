@@ -28,7 +28,8 @@
     <![endif]-->
 <style>
     .milestones{
-        margin-left:70px;
+        display:block;
+        float:center;
     }
     
     img .history{
@@ -36,6 +37,15 @@
         margin:0 auto;
     }
     
+     body, body.normal {
+    font-size: 16px;
+}
+body.big {
+    font-size: 36px;
+}
+body.small {
+    font-size: 12px;
+}
     </style>
 </head>
 
@@ -53,9 +63,23 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/"><img src="../img/logo.png" style="height:50px; width:50px;"/></a>
+                    <a class="navbar-brand" href="/"><img src="http://flyingtomatoairlines-cs3382.github.io/img/logo2-min.jpg" class="img-responsive" alt="logo image" style="height:50px; width:50px;"/></a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
+                <button class="js-font" data-size="big">Bigger</button>
+                <button class="js-font" data-size="normal">Normal</button>
+                <button class="js-font" data-size="small">Smaller</button>
+                <script>
+                    $(function() {
+
+    $('.js-font').on('click', function() {
+        $('body')
+            .attr('class', '')
+            .addClass($(this).data('size'));
+    });
+
+});
+           
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
