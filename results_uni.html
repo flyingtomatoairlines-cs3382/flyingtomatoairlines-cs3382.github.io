@@ -94,6 +94,15 @@
         var popup = document.getElementById('myPopup');
         popup.classList.toggle('show');
     }
+   
+              function getInfo(){
+            var x = document.getElementById('campus_form').text;
+            var y = document.getElementById('no_passenger_select_u').text;
+            var z = document.GetElementById('duration_form').text;
+                  return x;
+                  return y;
+                  return z;
+            }
 
 </script>
 
@@ -267,7 +276,7 @@
                     
                     <div class="form-group">
                         <label for="duration_input" class="col-md-2 control-label">Duration: </label>
-                        <select>
+                        <select id="duration_form">
                             <option value="Christmas">Christmas</option>
                             <option value="CNY">Chinese New Year</option>
                             <option value="Easter">Easter</option>
@@ -296,18 +305,12 @@
                         <input type="checkbox" name="directflight" value="Direct">
                     </div>
                     
-                    <input type="submit" value="Search" class="buttonSearch" onClick="getCampus(campus_form)">
+                    <input type="submit" value="Search" class="buttonSearch" onClick="getInfo()">
                 </form>   
             </div>
         </div>
         <div class="sectionBreak"></div>
         <p id="display_campus">Campus: </p>
-        <script>
-              function getCampus(){
-            var x = document.getElementById('campus_form').value;
-            document.getElementById("display_campus").innerHTML = x;
-            }
-        </script>
         <p id="display_duration">Duration: </p>
         <p id="display_passenger">No. of Passengers: </p>
         
