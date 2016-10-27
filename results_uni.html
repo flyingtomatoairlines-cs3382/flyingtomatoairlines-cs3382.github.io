@@ -96,7 +96,7 @@
     }
    
               function getInfo(){
-            var x = document.getElementById('campus_form').innerHTML;
+            var x = document.getElementById('campus_form');
             var y = document.getElementById('no_passenger_select_u').text;
             var z = document.GetElementById('duration_form').text;
                   return x;
@@ -319,7 +319,7 @@
                         <input type="checkbox" name="directflight" value="Direct">
                     </div>
                     
-                    <input type="submit" value="Search" class="buttonSearch" onClick="getInfo(x,y,z)">
+                    <input type="submit" value="Search" class="buttonSearch" onClick="getInfo()">
                 </form>   
             </div>
         </div>
