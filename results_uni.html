@@ -103,6 +103,19 @@
                   return y;
                   return z;
             }
+    
+    function showCampus(){
+        var showX = getInfo(x);
+    }
+    
+    function showDuration(){
+        var showY = getInfo(y);
+    }
+    
+    function showPassenger(){
+        var showZ = getInfo(z);
+    }
+    
 
 </script>
 
@@ -310,9 +323,9 @@
             </div>
         </div>
         <div class="sectionBreak"></div>
-        <p id="display_campus">Campus: </p>
-        <p id="display_duration">Duration: </p>
-        <p id="display_passenger">No. of Passengers: </p>
+        <p id="display_campus" onload="showCampus()">Campus: </p>
+        <p id="display_duration" onload="showDuration()">Duration: </p>
+        <p id="display_passenger" onload="showPassenger()">No. of Passengers: </p>
         
         <div class="row">
             <div class="col-md-7">
