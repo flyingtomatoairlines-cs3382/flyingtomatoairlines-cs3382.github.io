@@ -96,7 +96,7 @@
     }
    
               function getInfo(){
-            var x = document.getElementById('campus_form');
+            var x = document.getElementById('campus_form').text;
             var y = document.getElementById('no_passenger_select_u').text;
             var z = document.GetElementById('duration_form').text;
                   return x;
@@ -319,12 +319,21 @@
                         <input type="checkbox" name="directflight" value="Direct">
                     </div>
                     
-                    <input type="submit" value="Search" class="buttonSearch" onClick="getInfo()">
+                    <input type="submit" value="Search" class="buttonSearch" onClick="getInfo1()">
+                    
                 </form>   
             </div>
         </div>
         <div class="sectionBreak"></div>
-        <p id="display_campus" onload="showCampus()">Campus: </p>
+        <p id="display_campus" onload="showCampus1()">Campus: <script>
+                        function getInfo1(){
+                            var x = document.getElementById('campus_form').text;
+                            return x;
+                        }
+            funcion showCapmus1(){
+                document.write(getInfo1(x));
+            }
+                    </script></p>
         <p id="display_duration" onload="showDuration()">Duration: </p>
         <p id="display_passenger" onload="showPassenger()">No. of Passengers: </p>
         
