@@ -104,13 +104,27 @@ body.small {
         var popup = document.getElementById('myPopup');
         popup.classList.toggle('show');
     }
+	var campus = "";
+    
+    function fillval() {
+      phtml=document.querySelector("#display_campus");
+      if (window.location.search.substring(1)) {
+        phtml.innerHTML=window.location.search.substring(1);
+        campus=window.location.search.substring(1);
+      }
+      else {
+        phtml.innerHTML="No data sent";
+      }
+    }
+
+
 </script>
 
 <link rel="icon" type="image/png" href="img/favicon.x-icon">
 
 </head>
 
-<body>
+<body onload="fillval();">
 
     <!-- Navigation -->
     <div class="mainNav" id="top">
