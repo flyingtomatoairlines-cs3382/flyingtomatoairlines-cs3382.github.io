@@ -251,7 +251,7 @@
                         <br>
                     </div>
                     <div class="form-group">
-                        <label for="campus_input" class="col-md-2 control-label">Campus</label>
+                        <label for="campus_input" class="col-md-2 control-label" id="campus_form">Campus</label>
                         <select>
                             <option value="HKU">The University of Hong Kong</option>
                             <option value="CUHK">The Chinese University of Hong Kong</option>
@@ -302,9 +302,10 @@
         <div class="sectionBreak"></div>
         <p id="display_campus" onClick="getCampus()">Campus: </p>
         <p id="display_duration">Duration: </p>
+        <p id="display_passenger">No. of Passengers: </p>
         <script type="text/javascript">
             function getCampus(){
-            var disp_campus = document.getElementById('campus_input')
+            var disp_campus = document.getElementById('campus_form')
             return disp_campus;
             }
         </script>
