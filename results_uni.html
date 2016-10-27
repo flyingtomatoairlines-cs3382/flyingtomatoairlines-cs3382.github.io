@@ -105,7 +105,7 @@
             }
     
     function showCampus(){
-        alert(getInfo(x));
+        document.write('abc');
     }
     
     function showDuration(){
@@ -325,16 +325,7 @@
             </div>
         </div>
         <div class="sectionBreak"></div>
-        <p id="display_campus" onload="showCampus1()">Campus: </p>
-            <script>
-                        function getInfo1(){
-                            var x = document.getElementById('campus_form').text;
-                            return x;
-                        }
-            funcion showCapmus1(){
-                document.write('123');
-            }
-                    </script>
+        <p id="display_campus" onload="showCampus()">Campus: </p>
         <p id="display_duration" onload="showDuration()">Duration: </p>
         <p id="display_passenger" onload="showPassenger()">No. of Passengers: </p>
         
