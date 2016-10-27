@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Team1: 53552059 Lee Ho Ying, 53112091 Lam Kam Yan, 53571049 Lai Yan Lok">	 
+    <meta name="description" content="Flying tomato airlines provides you a fruitful journey within your budget!">
+    <meta name="keywords" content="Low budget carrier,Hong Kong,CS3382,Airlines, Low fare">
+
+    <title>Flying Tomato Airlines - Your fruitful journey here</title>
+   
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+    <link href="css/half-slider.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/results.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    
+    <style>
+        /* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+/* The actual popup (appears on top) */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+.hiddenSection{
+    display:none;
+    padding: 30px 18px;
+}
+.hiddenSection .show {
+    opacity: 1;
+    max-height: 500px;  
+} 
+</style>
+    
+<script>
+    // When the user clicks on <div>, open the popup
+    function subscribe() {
+        var popup = document.getElementById('myPopup');
+        popup.classList.toggle('show');
+    }
+</script>
+
+<link rel="icon" type="image/png" href="img/favicon.x-icon">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <div class="mainNav" id="top">
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="nav">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="http://flyingtomatoairlines-cs3382.github.io/img/logo2-min.jpg" class="img-responsive" alt="logo image" style="height:50px; width:50px;"/></a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right" >
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="navright">About Us <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="/about-us/company-history.html" id="dropdown-menu">Company History</a></li>
+                              <li><a href="/about-us/career.html" >Career</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="navright1">Promotion <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/promo/japan.html">Trip to Japan</a></li>
+                                <li><a href="/promo/korea.html">Trip to Korea</a></li>
+                                <li><a href="/promo/thailand.html">Trip to Thailand</a></li>
+                                <li><a href="/promo/vietnam.html">Trip to Vietnam</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="navright2">Membership <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/login.html">Login</a></li>
+                                <li><a href="/register.html">Register</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+    </div>
+    <div class="bannerBreak"></div>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        
+        <button type="button" class="btn btn-default btn-lg btn-block expandButton">Re-define Flight</button>
+
+        <div class="container-fluid bg-grey hiddenSection">
+            <div class="col-lg-12">
+                <h3>SEARCH</h3>
+                <p>Start your fruitful journey with Flying Tomato Airlines here!</p>
+                <form>
+                    <div class="form-group">
+                        <label for="ticketType_input" class="col-md-2 control-label">Ticket Type: </label>
+                        <div class="input-group ticketType col-md-5" data-link-field="ticketType_input">
+                            <input type="radio" name="ticketType_input" value="return" checked> Return
+                            <div class="sectionBreak"></div>
+                            <input type="radio" name="ticketType_input" value="oneWay"> One way
+                        </div>
+                        <br>
+                    </div>
+                    <div class="form-group">
+                        <label for="dtp_input1" class="col-md-2 control-label">Departure Date: </label>
+                        <div class="input-group date form_date col-md-5" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input1" data-link-format="yyyy-mm-dd">
+                            <input class="form-control" size="16" type="text" value="" readonly>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                        </div>
+                        <input type="hidden" id="dtp_input1" value="" /><br/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dtp_input2" class="col-md-2 control-label">Return Date: </label>
+                        <div class="input-group date form_date col-md-5" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                            <input class="form-control" size="16" type="text" value="" readonly>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                        </div>
+                        <input type="hidden" id="dtp_input2" value="" /><br/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loc_input1" class="col-md-2 control-label">Origin: </label>
+                        <select name="country">
+                            <option value="HKG">Hong Kong, Hong Kong Int'l (HKG)</option>
+                            <option value="NRT">Tokyo, Narita Int'l (NRT) Japan</option>
+                            <option value="ICT">Seoul, Incheon Int'l (ICT) Korea</option>
+                            <option value="BKK">Bangkok, Suvarnabhumi Int'l(BKK) Thailand</option>
+                            <option value="HAN">Hanoi, Noi Bai Int'l (HAN) Vietnam</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="loc_input2" class="col-md-2 control-label">Destination: </label>
+                        <select name="country">
+                            <option value="HKG">Hong Kong, Hong Kong Int'l (HKG)</option>
+                            <option value="NRT">Tokyo, Narita Int'l (NRT) Japan</option>
+                            <option value="ICT">Seoul, Incheon Int'l (ICT) Korea</option>
+                            <option value="BKK">Bangkok, Suvarnabhumi Int'l(BKK) Thailand</option>
+                            <option value="HAN">Hanoi, Noi Bai Int'l (HAN) Vietnam</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="no_input" class="col-md-2 control-label">No. of Passengers: </label>
+                        <select id="no_passenger_select" name="No_of_Passengers">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10+</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="no_input" class="col-md-2 control-label">Direct Flight Only?</label>
+                        <input type="checkbox" name="directflight" value="Direct">
+                    </div>
+                    <input type="submit" value="Search" class="buttonSearch">
+                </form>
+                
+                <hr>
+                
+                <h3>UNIVERSITY STUDENTS CORNER (HONG KONG ONLY)</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="ticketType_input_u" class="col-md-2 control-label">Ticket Type: </label>
+                        <div class="input-group ticketType col-md-5" data-link-field="ticketType_input">
+                            <input type="radio" name="ticketType_input" value="return" checked> Return
+                            <div class="sectionBreak"></div>
+                            <input type="radio" name="ticketType_input" value="oneWay"> One way
+                        </div>
+                        <br>
+                    </div>
+                    <div class="form-group">
+                        <label for="campus_input" class="col-md-2 control-label">Campus</label>
+                        <select>
+                            <option value="HKU">The University of Hong Kong</option>
+                            <option value="CUHK">The Chinese University of Hong Kong</option>
+                            <option value="HKUST">Hong Kong University of Science and Technology</option>
+                            <option value="CityU">City University of Hong Kong</option>
+                            <option value="PolyU">The Hong Kong Polytechnic University</option>
+                            <option value="BU">Hong Kong Baptist University</option>
+                            <option value="OUHK">The Open University of Hong Kong</option>
+                            <option value="SYU">Hong Kong Shue Yan University</option>
+                        </select><br>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="no_input_u" class="col-md-2 control-label">No. of Passengers: </label>
+                        <select id="no_passenger_select_u" name="No_of_Passengers">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10+</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="no_input" class="col-md-2 control-label">Direct Flight Only?</label>
+                        <input type="checkbox" name="directflight" value="Direct">
+                    </div>
+                    
+                    <input type="submit" value="Search" class="buttonSearch">
+                </form>   
+            </div>
+        </div>
+        <div class="sectionBreak"></div>
+        <div class="row">
+            <div class="col-md-7">
+                <h4>From <b>17 Nov 2016</b> To <b>24 Nov 2016</b></h4>
+                <div class="col-md-4 col-xs-3 col-header">
+                    <p>Airport:</p>
+                    <p>Flight No.:</p>
+                    <p>Time:</p>
+                </div>
+                <div class="col-md-8 col-xs-7">
+                <table class="table">
+                    <tbody>
+                      <tr>
+                        <td>HKG -> BKK</td>
+                        <td>BKK -> HKG</td>
+                      </tr>
+                      <tr>
+                        <td>FT0100</td>
+                        <td>FT3100</td>
+                      </tr>
+                      <tr>
+                        <td>9:20 PM - 2:10 AM</td>
+                        <td>4:10 PM - 7:45 PM</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+                <a class="btn btn-primary" href="#">Select this Flight <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-md-7">
+                <h4>From <b>17 Nov 2016</b> To <b>24 Nov 2016</b></h4>
+                <div class="col-md-4 col-xs-3 col-header">
+                    <p>Airport:</p>
+                    <p>Flight No.:</p>
+                    <p>Time:</p>
+                </div>
+                <div class="col-md-8 col-xs-7">
+                <table class="table">
+                    <tbody>
+                      <tr>
+                        <td>HKG -> HND</td>
+                        <td>HND -> HKG</td>
+                      </tr>
+                      <tr>
+                        <td>FT0200</td>
+                        <td>FT3200</td>
+                      </tr>
+                      <tr>
+                        <td>6:20 PM - 22:10 PM</td>
+                        <td>3:10 PM - 6:45 PM</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+                <a class="btn btn-primary" href="#">Select this Flight <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-md-7">
+                <h4>From <b>17 Nov 2016</b> To <b>24 Nov 2016</b></h4>
+                <div class="col-md-4 col-xs-3 col-header">
+                    <p>Airport:</p>
+                    <p>Flight No.:</p>
+                    <p>Time:</p>
+                </div>
+                <div class="col-md-8 col-xs-7">
+                <table class="table">
+                    <tbody>
+                      <tr>
+                        <td>HKG -> HAN</td>
+                        <td>HAN -> HKG</td>
+                      </tr>
+                      <tr>
+                        <td>FT0400</td>
+                        <td>FT3000</td>
+                      </tr>
+                      <tr>
+                        <td>9:20 AM - 2:10 PM</td>
+                        <td>4:10 AM - 7:45 AM</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+                <a class="btn btn-primary" href="#">Select this Flight <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-md-7">
+                <h4>From <b>1 Nov 2016</b> To <b>10 Nov 2016</b></h4>
+                <div class="col-md-4 col-xs-3 col-header">
+                    <p>Airport:</p>
+                    <p>Flight No.:</p>
+                    <p>Time:</p>
+                </div>
+                <div class="col-md-8 col-xs-7">
+                <table class="table">
+                    <tbody>
+                      <tr>
+                        <td>HKG -> KIX</td>
+                        <td>KIX -> HKG</td>
+                      </tr>
+                      <tr>
+                        <td>FT0100</td>
+                        <td>FT3100</td>
+                      </tr>
+                      <tr>
+                        <td>9:20 PM - 2:10 AM</td>
+                        <td>4:10 PM - 7:45 PM</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+                <a class="btn btn-primary" href="#">Select this Flight <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-md-7">
+                <h4>From <b>1 Nov 2016</b> To <b>10 Nov 2016</b></h4>
+                <div class="col-md-4 col-xs-3 col-header">
+                    <p>Airport:</p>
+                    <p>Flight No.:</p>
+                    <p>Time:</p>
+                </div>
+                <div class="col-md-8 col-xs-7">
+                <table class="table">
+                    <tbody>
+                      <tr>
+                        <td>HKG -> KIX</td>
+                        <td>KIX -> HKG</td>
+                      </tr>
+                      <tr>
+                        <td>FT0100</td>
+                        <td>FT3100</td>
+                      </tr>
+                      <tr>
+                        <td>9:20 PM - 2:10 AM</td>
+                        <td>4:10 PM - 7:45 PM</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+                <a class="btn btn-primary" href="#">Select this Flight <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Pagination -->
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <ul class="pagination">
+                    <li>
+                        <a href="#">&laquo;</a>
+                    </li>
+                    <li class="active">
+                        <a href="#">1</a>
+                    </li>
+                    <li>
+                        <a href="#">2</a>
+                    </li>
+                    <li>
+                        <a href="#">3</a>
+                    </li>
+                    <li>
+                        <a href="#">4</a>
+                    </li>
+                    <li>
+                        <a href="#">5</a>
+                    </li>
+                    <li>
+                        <a href="#">&raquo;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.row -->
+
+<hr>
+
+     
+
+    </div> 
+
+    <!-- Footer -->
+    <footer class="footer-distributed">
+        <div class="footer-left">
+            <h4>Flying <span>Tomato</span> Airlines</h4>
+            <p class="footer-links">
+                <a href="/about-us/company-history.html">About Us</a>
+                .
+                <a href="/promo/japan.html">Promotion</a>
+                .
+                <a href="/flyingtomatoairlines-cs3382.github.io/login.html">Membership</a>
+                .<br />
+                <a href="/privacy.html">Privacy Policy</a>
+                .
+                <a href="/terms-of-use.html">Terms of Use</a>
+            </p>
+            <div class="subscribe">
+                <input type="text" name="subscribe" placeholder="Email address here">
+                <div class="popup" onclick="subscribe()">
+                    <input type="submit" class="buttonSub" value="Subscribe!">
+                    <span class="popuptext" id="myPopup">Subscribed successfully!</span>
+                </div>
+            </div>
+        </div>
+            
+            
+            
+        <div class="footer-center">
+
+            <div>
+                <img src="img/location.png" alt="image" />
+                <p>21 Revolution Street <br/> Hong Kong</p>
+            </div>
+
+            <div>
+                <img src="img/phone.png" alt="image"/>
+                <p>(Tel)+852 8765 4321<br />
+                (Fax)+852 2134 5678</p>
+            </div>
+
+            <div>
+                <img src="img/email.png" alt="image"/>
+                <p><a href="mailto:support@flyingtomatoairlines.com" id="email">support@flyingtomatoairlines.com</a></p>
+            </div>
+            
+        </div>
+        <!-- /.row -->
+        <div class="footer-right">
+            <p class="footer-text"><span>About the Airlines</span>This is not a real website. This was designed as part of a school project on web design and usability.</p>
+            <br />
+            <p class="footer-text"><span>Copyright &copy; CityU Hong Kong CS3382 Team 1 2016</span></p>
+        </div>
+        <div class="container-fluid text-center">
+            <a href="#top" title="To Top">
+                <span class="glyphicon glyphicon-chevron-up"></span>
+            </a>
+        </div>
+    </footer>
+    
+        <!--<div>Icons made by <a href="http://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>-->
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+
+    <script src="js/main.js"></script>
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+
+    <script type="text/javascript">
+    $('.form_datetime').datetimepicker({
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        forceParse: 0,
+        showMeridian: 1
+    });
+    $('.form_date').datetimepicker({
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        minView: 2,
+        forceParse: 0
+    });
+    $('.form_time').datetimepicker({
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 1,
+        minView: 0,
+        maxView: 1,
+        forceParse: 0
+    });
+</script>
+
+<script>
+    var acc = document.getElementsByClassName("expandButton");
+    var i;
+    for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function(){
+            this.classList.toggle("active");
+            this.nextElementSibling.classList.toggle("show");
+      }
+    }
+</script>
+
+</body>
+
+</html>
