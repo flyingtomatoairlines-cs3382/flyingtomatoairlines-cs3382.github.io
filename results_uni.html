@@ -96,8 +96,9 @@
     }
 
             function getCampus(){
-            var disp_campus = document.getElementById('campus_form');
-            return disp_campus;
+            var e = document.getElementById('campus_form');
+                var strOptions = e.options[e.selectedIndex].value;
+            return strOptions;
             }
 
 </script>
