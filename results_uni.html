@@ -96,9 +96,8 @@
     }
 
             function getCampus(){
-            var e = document.getElementById('campus_form');
-                var strOptions = e.options[e.selectedIndex].value;
-            return strOptions;
+            var x = document.getElementById('campus_form').value;
+            document.getElementById("display_campus").innerHTML = x;
             }
 
 </script>
@@ -307,7 +306,7 @@
             </div>
         </div>
         <div class="sectionBreak"></div>
-        <p id="display_campus" onClick="getCampus()">Campus: </p>
+        <p id="display_campus">Campus: </p>
         <p id="display_duration">Duration: </p>
         <p id="display_passenger">No. of Passengers: </p>
         
