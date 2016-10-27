@@ -247,7 +247,7 @@
                 <hr>
                 
                 <h3>UNIVERSITY STUDENTS CORNER (HONG KONG ONLY)</h3>
-                <form>
+                <form onsubmit='return getInfo(this);'>
                     <div class="form-group">
                         <label for="ticketType_input_u" class="col-md-2 control-label">Ticket Type: </label>
                         <div class="input-group ticketType col-md-5" data-link-field="ticketType_input">
@@ -302,7 +302,7 @@
                         <input type="checkbox" name="directflight" value="Direct">
                     </div>
                     
-                    <input type="submit" value="Search" class="buttonSearch" onClick="getInfo1()">
+                    <input type="submit" value="Search" class="buttonSearch">
                     
                 </form>   
             </div>
