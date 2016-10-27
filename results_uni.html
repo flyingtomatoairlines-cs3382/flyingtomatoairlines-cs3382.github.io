@@ -96,27 +96,10 @@
     }
    
               function getInfo(){
-            var x = document.getElementById('campus_form').text;
-            var y = document.getElementById('no_passenger_select_u').text;
-            var z = document.GetElementById('duration_form').text;
-                  return x;
-                  return y;
-                  return z;
+           document.getElementById('display_campus').innerHTML = 
+                    document.getElementById("campus_form").text;
             }
-    
-    function showCampus(){
-        document.write('abc');
-    }
-    
-    function showDuration(){
-        alert(getInfo(y));
-    }
-    
-    function showPassenger(){
-        var showZ = getInfo(z);
-        document.write(showZ);
-    }
-    
+
 
 </script>
 
@@ -325,7 +308,7 @@
             </div>
         </div>
         <div class="sectionBreak"></div>
-        <p id="display_campus" onload="showCampus()">Campus: </p>
+        <p>Campus: <span id="display_campus"></span></p>
         <p id="display_duration" onload="showDuration()">Duration: </p>
         <p id="display_passenger" onload="showPassenger()">No. of Passengers: </p>
         
