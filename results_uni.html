@@ -95,11 +95,6 @@
         popup.classList.toggle('show');
     }
 
-            function getCampus(){
-            var x = document.getElementById('campus_form').value;
-            document.getElementById("display_campus").innerHTML = x;
-            }
-
 </script>
 
 <link rel="icon" type="image/png" href="img/favicon.x-icon">
@@ -307,6 +302,12 @@
         </div>
         <div class="sectionBreak"></div>
         <p id="display_campus">Campus: </p>
+        <script>
+              function getCampus(){
+            var x = document.getElementById('campus_form').value;
+            document.getElementById("display_campus").innerHTML = x;
+            }
+        </script>
         <p id="display_duration">Duration: </p>
         <p id="display_passenger">No. of Passengers: </p>
         
