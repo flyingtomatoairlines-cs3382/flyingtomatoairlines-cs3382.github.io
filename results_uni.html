@@ -116,18 +116,7 @@ body.small {
         phtml.innerHTML="No data sent";
       }
     }
- function load(){
-        var foodSelected=localStorage.getItem(campus);
-        var splitItem=foodSelected.split("&");
-        var fullString="";
-        for(var i=0;i<splitItem.length;i++){
-            splitItem[i]+="<p></p>";
-            fullString+=splitItem[i];
-        }
-        document.getElementById("display_duration").innerHTML=fullString;
-        
-        
-    }
+
 
 
 
@@ -137,7 +126,7 @@ body.small {
 
 </head>
 
-<body onload="fillval();load();">
+<body onload="fillval();>
 
     <!-- Navigation -->
     <div class="mainNav" id="top">
