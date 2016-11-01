@@ -98,7 +98,7 @@
     font-size: 16px;
 }
 body.big {
-    font-size: 36px;
+    font-size: 20px;
 }
 body.small {
     font-size: 12px;
@@ -133,21 +133,25 @@ body.small {
                     </button>
                     <a class="navbar-brand" href="/"><img src="http://flyingtomatoairlines-cs3382.github.io/img/logo2-min.jpg" class="img-responsive" alt="logo image" style="height:50px; width:50px;"/></a>
                 </div>
+                
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                 <button class="js-font" data-size="big">Bigger</button>
-                <button class="js-font" data-size="normal">Normal</button>
-                <button class="js-font" data-size="small">Smaller</button>
-                <script>
-                    $(function() {
-    $('.js-font').on('click', function() {
-        $('body')
-            .attr('class', '')
-            .addClass($(this).data('size'));
-    });
-});
-		    </script>
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <div class="font-adj">
+                        <a class="js-font sm" data-size="small">A</a>&nbsp;
+                        <a class="js-font n" data-size="normal">A</a>&nbsp;
+                        <a class="js-font bg" data-size="big">A</a>
+                        <script>
+                            $(function() {
+                                $('.js-font').on('click', function() {
+                                    $('body')
+                                        .attr('class', '')
+                                        .addClass($(this).data('size'));
+                                });
+
+                            });
+                        </script>
+                    </div>
                     <ul class="nav navbar-nav navbar-right" >
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="navright">About Us <span class="caret"></span></a>
