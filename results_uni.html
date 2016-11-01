@@ -539,7 +539,117 @@ body.small {
         <!-- /.row -->
 
 <hr>
-
+<form action="personalinfo.php">
+                <div class="passengerinfo">
+                    * Indicates a required field (input in English)
+                    <br><br>
+                    Title*
+                    <br>
+                    <div class="dropdown">
+                        <button class="dropbtn">-</button>
+                            <div class="dropdown-content">
+                                <a href="#">-</a>
+                                <a href="#">Mr</a>
+                                <a href="#">Mrs</a>
+                                <a href="#">Ms</a>
+                                <a href="#">Miss</a>
+                                <a href="#">Dr</a>
+                                <a href="#">Professor</a>
+                            </div>
+                    </div>
+                </div>
+                <br>
+                Given/First and Middle Names*<br>
+                <input type="text" name="firstname" value="">
+                <br><br>
+                Family/ Last name*<br>
+                <input type="text" name="lastname" value="">
+                <br><br>
+                Email* <br>
+                <input type="text" name="email" value="">
+                <br><br>
+                Contact Number* <br>
+                We highly recommend you to provide us your number for contacting you in case of flight changes. <br><br>
+                Country code*
+                
+                &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Area Code
+                &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                Number (omit spaces)*<br> 
+                <input type="text" name="countrycode" value=""> - 
+                <input type="text" name="areacode value=""> -
+                <input type="text" name="number="">
+                <br><br>
+                <a class="btn btn-primary" href="#">Contine to payment<span class="glyphicon glyphicon-chevron-right"></span></a>
+                <br><br>
+                
+            </form>
+            <p>Payment Details</p>
+            <form action="payment">
+           
+                <input type="radio" name="Creditcard" value="VISA" checked> &nbsp; <img src="img/visa.gif" alt= "Visa icon"> &nbsp; VISA<br><br>
+                <input type="radio" name="Creditcard" value="MasterCard"> &nbsp; <img src="img/mastercard.gif" alt= "MasterCard icon"> &nbsp; MasterCard<br><br>
+                <input type="radio" name="Creditcard" value="American Express"> &nbsp;<img src="img/americanexpress.gif" alt= "American Express icon"> &nbsp;  American Express <br><br>
+                <input type="radio" name="Creditcard" value="UnionPay"> &nbsp; <img src="img/unionpay.gif" alt= "UnionPay icon"> &nbsp; UnionPay <br><br>
+                <input type="radio" name="Creditcard" value="PPS"> &nbsp; <img src="img/pps.gif" alt= "PPS icon"> &nbsp; PPS <br><br>
+                
+                * Indicates a required field (input in English) <br><br>
+                
+                Card Number(omit spaces)*<br>
+                <input type="text" name="cardnumber" value="">
+                <br><br>
+                
+                Name of Cardholder*<br>
+                <input type="text" name="nameofcardholder" value="">
+                <br><br>
+                
+                Security Code*<br>
+                <input type="text" name="securitycode" value="">
+                <br><br>
+                
+                Expiry Date*<br><br>
+                
+                <select>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                
+                <select>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                </select>
+                
+                <br><br>
+                
+                Country/Territory*<br>
+                <input type="text" name="country" value="">
+                <br><br>
+                
+                Grand Total: <br>
+                HKD$1280.00
+                <br><br>
+                <a class="btn btn-primary" href="#">Purchase<span class="glyphicon glyphicon-chevron-right"></span></a>
+                
+            </form>
      
 
     </div> 
