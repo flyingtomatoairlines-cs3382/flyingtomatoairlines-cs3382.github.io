@@ -16,6 +16,26 @@ line height is 20px by default so add 30px top and bottom to equal the new .navb
   margin: 25px 15px 25px 0;
 }
 
+.font-adj {
+	position: absolute;
+	top: 5px;
+	z-index: 5;
+}
+
+.font-adj>.sm {
+	font-size: 1em;
+}
+
+.font-adj>.bg {
+	font-size: 1.5em;
+}
+
+@media(max-width: 1520px) {
+	.font-adj {
+		right:40px;
+	}
+}
+
 .container-fluid {
   padding: 60px 50px;
 }
