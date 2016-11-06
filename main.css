@@ -16,6 +16,26 @@ line height is 20px by default so add 30px top and bottom to equal the new .navb
   margin: 25px 15px 25px 0;
 }
 
+.font-adj {
+	position: absolute;
+	top: 5px;
+	z-index: 5;
+}
+
+.font-adj>.sm {
+	font-size: 1em;
+}
+
+.font-adj>.bg {
+	font-size: 1.5em;
+}
+
+@media(max-width: 1520px) {
+	.font-adj {
+		right:40px;
+	}
+}
+
 .container-fluid {
   padding: 60px 50px;
 }
@@ -42,7 +62,7 @@ line height is 20px by default so add 30px top and bottom to equal the new .navb
 
 /* Form */
 .buttonSearch {
-	background-color: #006666;
+	background-color: #004466;
     border: none;
     color: white;
     padding: 16px 32px;
@@ -159,7 +179,7 @@ footer {
 }
 
 .buttonSub {
-	background-color: #006666;
+	background-color: #004466;
     border: none;
     color: white;
     padding: 5px 20px;
@@ -173,6 +193,60 @@ footer {
     cursor: pointer;
     width: 100%;
 }
+
+/* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
 
 /* Footer Center */
 
@@ -295,7 +369,7 @@ footer {
 }
 
 #nav{
-	background-color: #00004d;
+	background-color: #273A7F;
 }
 
 
@@ -342,11 +416,11 @@ input[type='radio'] {
 
 #navright #navright1 #navright2:hover{
   background-color: white;
-  color: #2E8B57;
+  color: #273A7F;
 }
 
 .footer-distributed .footer-left span{
-  color:#DC143C;
+  color:#BC3F28;
   font-family: 'Aktiv Grotesk W01 Regular',sans-serif;
 }
 .footer-distributed .footer-left h4{
