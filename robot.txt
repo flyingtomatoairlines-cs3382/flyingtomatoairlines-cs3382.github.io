@@ -1,0 +1,5 @@
+User-Agent: *
+
+Allow: /flyingtomatoairlines-cs3382.github.io/
+
+Sitemap: https://flyingtomatoairlines-cs3382.github.io/sitemap-2.xml
