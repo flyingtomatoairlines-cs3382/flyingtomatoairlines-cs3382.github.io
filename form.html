@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Team1: 53552059 Lee Ho Ying, 53112091 Lam Kam Yan, 53571049 Lai Yan Lok">	 
+    <meta name="description" content="Flying tomato airlines provides you a fruitful journey within your budget!">
+    <meta name="keywords" content="Low budget carrier,Hong Kong,CS3382,Airlines, Low fare">
+
+    <title>Flying Tomato Airlines - Your fruitful journey here</title>
+   
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+    <link href="css/half-slider.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    
+    <style>
+        /* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+.hiddenSection{
+    display:none;
+    padding: 30px 18px;
+}
+
+.hiddenSection .show {
+    opacity: 1;
+    max-height: 500px;  
+} 
+        
+         body, body.normal {
+    font-size: 16px;
+}
+body.big {
+    font-size: 20px;
+}
+body.small {
+    font-size: 12px;
+}
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+</style>
+    
+<script>
+    // When the user clicks on <div>, open the popup
+    function subscribe() {
+        var popup = document.getElementById('myPopup');
+        popup.classList.toggle('show');
+    }
+</script>
+
+<link rel="icon" type="image/png" href="img/favicon.x-icon">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <div class="mainNav" id="top">
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="nav">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="http://flyingtomatoairlines-cs3382.github.io/img/logo2-min.jpg" class="img-responsive" alt="logo image" style="height:50px; width:50px;"/></a>
+                </div>
+                
+                <!-- Collect the nav links, forms, and other content for toggling -->
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <div class="font-adj">
+                        <a class="js-font sm" data-size="small">A</a>&nbsp;
+                        <a class="js-font n" data-size="normal">A</a>&nbsp;
+                        <a class="js-font bg" data-size="big">A</a>
+                        <script>
+                            $(function() {
+                                $('.js-font').on('click', function() {
+                                    $('body')
+                                        .attr('class', '')
+                                        .addClass($(this).data('size'));
+                                });
+
+                            });
+                        </script>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right" >
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="navright">About Us <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="/about-us/company-history.html" id="dropdown-menu">Company History</a></li>
+                              <li><a href="/about-us/career.html" >Career</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="navright1">Promotion <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/promo/japan.html">Trip to Japan</a></li>
+                                <li><a href="/promo/korea.html">Trip to Korea</a></li>
+                                <li><a href="/promo/thailand.html">Trip to Thailand</a></li>
+                                <li><a href="/promo/vietnam.html">Trip to Vietnam</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="navright2">Membership <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/login.html">Login</a></li>
+                                <li><a href="/register.html">Register</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+    </div>
+    <div class="bannerBreak"></div>
+
+    <!-- Page Content -->
+    <div class="container">
+
+       <h2>Fill in your personal information</h2> 
+
+        <hr>
+        <div class="progress">
+            <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:30%">30% Complete</div>
+        </div>
+        <div class="container-fluid bg-grey">
+            <form action="payment.html">
+                <div class="passengerinfo">
+                    <span class="remark">*</span> Indicates a required field (input in English)
+                    <br><br>
+                    Title<span class="remark">*</span>
+                    <br>
+                    
+                    <select name="title">
+                            <option value="-">-</option>
+                            <option value="Mr">Mr</option>
+                            <option value="Mrs">Mrs</option>
+                            <option value="Ms">Ms</option>
+                            <option value="Miss">Miss</option>
+                            <option value="Dr">Dr</option>
+                            <option value="Professor">Professor</option>
+                    </select>
+                        
+                </div>
+
+                <br>
+                Given/First and Middle Names<span class="remark">*</span><br>
+                <input type="text" name="firstname" value="">
+                <br><br>
+                Family/ Last name<span class="remark">*</span><br>
+                <input type="text" name="lastname" value="">
+                <br><br>
+                Email<span class="remark">*</span> <br>
+                <input type="text" name="email" value="">
+                <br><br>
+                Contact Number<span class="remark">*</span> <br>
+                We highly recommend you to provide us your number for contacting you in case of flight changes. <br><br>
+                Country code<span class="remark">*</span> <br> 
+                <input type="text" name="countrycode" value=""> <br><br>
+                Area Code <br>
+                <input type="text" name="areacode" value=""> <br><br>
+                Number (omit spaces)<span class="remark">*</span><br> 
+                <input type="text" name="number" value=""><br><br>
+                <a class="btn btn-primary" href="payment.html">Continue to payment<span class="glyphicon glyphicon-chevron-right"></span></a>
+                <br><br>
+                    
+            </form>
+        </div>
+            
+     
+
+    </div> 
+
+    <!-- Footer -->
+    <footer class="footer-distributed">
+        <div class="footer-left">
+            <h4>Flying <span>Tomato</span> Airlines</h4>
+            <p class="footer-links">
+                <a href="/about-us/company-history.html">About Us</a>
+                .
+                <a href="/promo/japan.html">Promotion</a>
+                .
+                <a href="/flyingtomatoairlines-cs3382.github.io/login.html">Membership</a>
+                .<br />
+                <a href="/privacy.html">Privacy Policy</a>
+                .
+                <a href="/terms-of-use.html">Terms of Use</a>
+            </p>
+            <div class="subscribe">
+                <input type="text" name="subscribe" placeholder="Email address here">
+                <div class="popup" onclick="subscribe()">
+                    <input type="submit" class="buttonSub" value="Subscribe!">
+                    <span class="popuptext" id="myPopup">Subscribed successfully!</span>
+                </div>
+            </div>
+        </div>
+            
+            
+            
+        <div class="footer-center">
+
+            <div>
+                <img src="img/location.png" alt="image" />
+                <p>21 Revolution Street <br/> Hong Kong</p>
+            </div>
+
+            <div>
+                <img src="img/phone.png" alt="image"/>
+                <p>(Tel)+852 8765 4321<br />
+                (Fax)+852 2134 5678</p>
+            </div>
+
+            <div>
+                <img src="img/email.png" alt="image"/>
+                <p><a href="mailto:support@flyingtomatoairlines.com" id="email">support@flyingtomatoairlines.com</a></p>
+            </div>
+            
+        </div>
+        <!-- /.row -->
+        <div class="footer-right">
+            <p class="footer-text"><span>About the Airlines</span>This is not a real website. This was designed as part of a school project on web design and usability.</p>
+            <br />
+            <p class="footer-text"><span>Copyright &copy; CityU Hong Kong CS3382 Team 1 2016</span></p>
+        </div>
+        <div class="container-fluid text-center">
+            <a href="#top" title="To Top">
+                <span class="glyphicon glyphicon-chevron-up"></span>
+            </a>
+        </div>
+    </footer>
+    
+        <!--<div>Icons made by <a href="http://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>-->
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+
+    <script src="js/main.js"></script>
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+
+    <script type="text/javascript">
+    $('.form_datetime').datetimepicker({
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        forceParse: 0,
+        showMeridian: 1
+    });
+    $('.form_date').datetimepicker({
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        minView: 2,
+        forceParse: 0
+    });
+    $('.form_time').datetimepicker({
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 1,
+        minView: 0,
+        maxView: 1,
+        forceParse: 0
+    });
+</script>
+
+<script>
+    var acc = document.getElementsByClassName("expandButton");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function(){
+            this.classList.toggle("active");
+            this.nextElementSibling.classList.toggle("show");
+      }
+    }
+</script>
+
+</body>
+
+</html>
