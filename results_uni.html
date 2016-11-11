@@ -114,29 +114,7 @@ body.small {
 
 </style>
     
-<script>
-    // When the user clicks on <div>, open the popup
-    function subscribe() {
-        var popup = document.getElementById('myPopup');
-        popup.classList.toggle('show');
-    }
-	var campus = "";
-    
-    function fillval() {
-      phtml=document.querySelector("#display_campus");
-      if (window.location.search.substring(1)) {
-        phtml.innerHTML=window.location.search.substring(1);
-        campus=window.location.search.substring(1);
-      }
-      else {
-        phtml.innerHTML="No data sent";
-      }
-    }
 
-
-
-
-</script>
 
 <link rel="icon" type="image/png" href="img/favicon.x-icon">
 
@@ -359,9 +337,7 @@ body.small {
             </div>
         </div>
         <div class="sectionBreak"></div>
-        <p>Campus: <span id="display_campus"></span></p>
-        <p>Duration: <span id="display_duration"></span></p>
-        <p>No. of Passengers: <span id="display_passenger"></span></p>
+
         
         <div class="row">
             <div class="col-md-7">
