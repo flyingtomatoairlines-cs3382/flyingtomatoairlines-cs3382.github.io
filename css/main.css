@@ -2,6 +2,13 @@
 
 line height is 20px by default so add 30px top and bottom to equal the new .navbar-brand 80px height  */
 
+#skiptocontent {
+	height: 1px;
+	width: 1px;
+	position: absolute;
+	overflow: hidden;
+	top: -10px;
+}
 
 .mainNav .navbar-brand {
   height: 80px;
@@ -11,9 +18,14 @@ line height is 20px by default so add 30px top and bottom to equal the new .navb
   padding-top: 30px;
   padding-bottom: 30px;
 }
+
 .mainNav .navbar-toggle {
   padding: 10px;
   margin: 25px 15px 25px 0;
+}
+
+ul.dropdown-menu>li {
+	padding: 10px 0px;
 }
 
 .font-adj {
@@ -34,6 +46,31 @@ line height is 20px by default so add 30px top and bottom to equal the new .navb
 	.font-adj {
 		right:40px;
 	}
+}
+
+@media(max-width: 768px) {
+	.font-adj {
+		right:15%;
+		font-size: 1.5em;
+	}
+
+	.font-adj>.sm {
+		font-size: 1.0em;
+	}
+
+	.font-adj>.bg {
+		font-size: 1.8em;
+	}
+}
+
+@media (min-width: 768px) {
+	.navbar-right {
+		margin-right: 50px;
+	}
+}
+
+.navbar-inverse {
+	border-color: #273A7F;
 }
 
 .container-fluid {
@@ -77,6 +114,24 @@ line height is 20px by default so add 30px top and bottom to equal the new .navb
     width: 40%;
 }
 
+@media(max-width: 768px) {
+	.buttonSearch {
+		background-color: #004466;
+	    border: none;
+	    color: white;
+	    padding: 16px 32px;
+	    text-align: center;
+	    text-decoration: none;
+	    display: inline-block;
+	    font-size: 16px;
+	    margin: 4px 2px;
+	    -webkit-transition-duration: 0.01s; /* Safari */
+	    transition-duration: 0.4s;
+	    cursor: pointer;
+	    width: 90%;
+	}
+}
+
 .buttonSearch:hover {
     background-color: #000033;
 }
@@ -85,6 +140,18 @@ select {
     width: 30%;
     padding: 10px 20px;
     border-radius: 4px;
+}
+
+@media(max-width: 768px) {
+	select {
+	    width: 60%;
+	    padding: 10px 20px;
+	    border-radius: 4px;
+	}
+
+	select#no_passenger_select_u, select#no_passenger_select{
+		width: 30%;
+	}
 }
 
 /* End of Form */
@@ -101,6 +168,13 @@ select {
 
 .container>.row {
 	padding: 0 100px;
+}
+
+@media(max-width: 768px) {
+	.container>.row {
+		padding: 0 50px;
+	}
+
 }
 
 .content-section-a {
@@ -142,7 +216,9 @@ footer {
 
 /* Footer left */
 
-
+.footer-left {
+	width: 35%;
+}
 
 /* The company logo */
 
@@ -193,6 +269,8 @@ footer {
     cursor: pointer;
     width: 100%;
 }
+
+
 
 /* Popup container */
 .popup {
