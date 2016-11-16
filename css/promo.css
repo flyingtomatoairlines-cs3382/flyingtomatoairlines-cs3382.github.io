@@ -1,0 +1,14 @@
+/* promo.css */
+
+.circle{
+	border-radius:50%;
+	height:300px;
+	width:300px;
+}
+
+.promo_descrip{
+    display:block;
+    float:right;
+    margin-top:5px;
+    font:30px;
+}

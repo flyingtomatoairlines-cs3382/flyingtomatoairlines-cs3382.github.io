@@ -2,3 +2,12 @@
     font-style: italic;
 }
 
+.hiddenSection{
+    display:none;
+    padding: 30px 18px;
+}
+
+.hiddenSection .show {
+    opacity: 1;
+    max-height: 500px;  
+} 

@@ -1,0 +1,23 @@
+/* about-us.css */
+
+/* Career */
+.hiddenText{
+	display:none;
+	padding: 30px 18px;
+}
+
+.image .hiddenText .show {
+	opacity: 1;
+	max-height: 500px;  
+} 
+
+/* Company History */
+.milestones{
+    display:block;
+    float:center;
+}
+        
+img .history{
+   display:block;
+    margin:0 auto;
+}
